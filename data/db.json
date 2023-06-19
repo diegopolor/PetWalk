@@ -1,0 +1,222 @@
+{
+    "users": [
+        {
+            "id": "18d58895-fea5-4dc9-8577-3d09741c42db",
+            "username": "demo",
+            "password": "demo",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE4ZDU4ODk1LWZlYTUtNGRjOS04NTc3LTNkMDk3NDFjNDJkYiIsInVzZXJuYW1lIjoiZGVtbyIsImlhdCI6MTUxNjIzOTAyMn0.k37jlPKGPc2MSBohQPjHUSYvQu7vMuhGCBUnKn2ySuU"
+        }
+    ],
+    "caretakers": [
+        {
+        "id": "b63d9edc-4f5f-481c-aade-014f2106f842",
+        "fullName": "Ana Luz Garcia Quiróz",
+        "description": "Mi nombre es Ana Luz García Quiróz y soy una cuidadora apasionada por el bienestar de las mascotas. Con más de varios años de experiencia en el cuidado de animales, me dedico a brindarles amor y atención durante los paseos. Mi compromiso y dedicación son evidentes en cada interacción, siempre priorizando la seguridad y el confort de las mascotas. Soy paciente, responsable y presto atención a cada detalle para asegurarme de que disfruten de un paseo agradable y seguro. Mi conocimiento sobre el comportamiento animal y mi capacidad para establecer una conexión especial con ellos me convierten en una opción confiable y confiable para cuidar de tus queridas mascotas. Estoy emocionada de conocer a tu peludo amigo y brindarle el cuidado que se merece.",
+        "age": 25,
+        "ocupation": "Estudiante",
+        "calification": 4,
+        "avalible": [
+            {
+                "date": "19/06/2023",
+                "startTime": "08:00",
+                "endTime": "12:00"
+            },
+            {
+                "date": "19/06/2023",
+                "startTime": "18:00",
+                "endTime": "20:30"
+            },
+            {
+                "date": "20/06/2023",
+                "startTime": "08:00",
+                "endTime": "12:00"
+            },
+            {
+                "date": "21/06/2023",
+                "startTime": "18:00",
+                "endTime": "20:30"
+            },
+            {
+                "date": "21/06/2023",
+                "startTime": "14:00",
+                "endTime": "16:00"
+            }
+        ],
+        "hourly rate": "8000",
+        "comments" : [
+            {
+                "name": "Rigoberto Martínez",
+                "comment": "Los cuidados de Ana Luz son excepcionales!!",
+                "stars": 4
+            }
+            
+        ]
+        },
+        {
+        "id": "92917c76-8ae0-4d5a-a1e0-130c70a26e60",
+        "fullName": "Alexander Pertuz Olivia",
+        "description": "Soy Alexander Pertuz Olivia, un cuidador comprometido y amante de los animales. Mi pasión es brindarles cuidado y atención durante nuestros paseos juntos. Estoy aquí para asegurar que tus mascotas se sientan amadas y protegidas en todo momento.",
+        "age": 20,
+        "ocupation": "Estudiante",
+        "calification": 3,
+        "avalible": [
+            {
+                "date": "20/06/2023",
+                "startTime": "09:00",
+                "endTime": "11:00"
+            },
+            {
+                "date": "21/06/2023",
+                "startTime": "18:00",
+                "endTime": "20:30"
+            }
+        ],
+        "hourly rate": "8000",
+        "comments" : [
+            {
+                "name": "Eugenia Pérez",
+                "comment": "Alexander es un cuidador excepcional y confiable.",
+                "stars": 3
+            }
+            
+        ]
+        },
+        {
+        "id": "eaabedb3-d1f8-4fae-baf5-1dfb52919fbc",
+        "fullName": "Kevin Monsalve",
+        "description": "Hola, soy Kevin Monsalve, un apasionado cuidador de mascotas. Me encanta pasar tiempo con los animales y brindarles todo el amor y cuidado que se merecen. Mi enfoque principal es garantizar su felicidad y bienestar durante los paseos. Con paciencia y dedicación, me aseguro de que se sientan seguros y cómodos en todo momento.",
+        "age": 19,
+        "ocupation": "Estudiante",
+        "calification": 4,
+        "avalible": [
+            {
+                "date": "19/06/2023",
+                "startTime": "17:00",
+                "endTime": "19:00"
+            },
+            {
+                "date": "22/06/2023",
+                "startTime": "18:00",
+                "endTime": "20:30"
+            }
+        ],
+        "hourly rate": "9000",
+        "comments" : [
+            {
+                "name": "Rosa Esmeralda Ortiz",
+                "comment": "Alexander es un cuidador excepcional y confiable.",
+                "stars": 4
+            }
+            
+        ]
+        },
+        {
+        "id": "c8917913-9cac-4cee-90be-38385fa2e699",
+        "fullName": "Adriana Martínez Ruda",
+        "description": "Hola, soy Adriana Martínez Ruda, una cuidadora de mascotas comprometida y amante de los animales. Disfruto cada momento que paso con ellos, brindándoles el cuidado y la atención que se merecen. Mi objetivo principal es asegurarme de que se sientan felices y cómodos durante nuestros paseos juntos. Con paciencia y afecto, establezco un vínculo especial con cada mascota, creando un ambiente de confianza y cariño. Me enorgullece ser una cuidadora confiable y responsable, siempre buscando su bienestar y seguridad. Estoy emocionada de conocer a tus adorables compañeros y proporcionarles una experiencia de paseo llena de amor y diversión.",
+        "age": 20,
+        "ocupation": "Estudiante",
+        "calification": 4,
+        "avalible": [
+            {
+                "date": "19/06/2023",
+                "startTime": "17:00",
+                "endTime": "19:00"
+            },
+            {
+                "date": "22/06/2023",
+                "startTime": "18:00",
+                "endTime": "20:30"
+            }
+        ],
+        "hourly rate": "1000",
+        "comments" : [
+            {
+                "name": "Osvalo Medina",
+                "comment": "Adriana, eres una cuidadora excepcional y apreciamos tu dedicación.",
+                "stars": 4
+            }
+            
+        ]
+        },
+        {
+        "id": "923615e8-fbc1-4511-97be-2952944a6445",
+        "fullName": "María Giraldo",
+        "description": "Soy María Giraldo, una apasionada cuidadora de 16 años con un amor incondicional hacia los animales. Mi conexión con ellos es innata y me llena de alegría poder brindarles cuidado y compañía. Me esfuerzo por comprender las necesidades y preferencias únicas de cada mascota, asegurándome de que se sientan amados y seguros en mi cuidado. Mi compromiso es proporcionar atención individualizada, paciencia y cariño a cada animal que tengo el privilegio de cuidar. Ser una cuidadora dedicada es mi pasión y me llena de felicidad poder hacer una diferencia en la vida de estos maravillosos seres.",
+        "age": 16,
+        "ocupation": "Estudiante",
+        "calification": 5,
+        "avalible": [
+            {
+                "date": "19/06/2023",
+                "startTime": "14:00",
+                "endTime": "16:00"
+            },
+            {
+                "date": "19/06/2023",
+                "startTime": "18:00",
+                "endTime": "20:30"
+            },
+            {
+                "date": "20/06/2023",
+                "startTime": "14:00",
+                "endTime": "16:00"
+            },
+            {
+                "date": "20/06/2023",
+                "startTime": "18:00",
+                "endTime": "20:30"
+            },
+            {
+                "date": "21/06/2023",
+                "startTime": "14:00",
+                "endTime": "16:00"
+            }
+        ],
+        "hourly rate": "10000",
+        "comments" : [
+            {
+                "name": "Christina Marcerla Armadea",
+                "comment": "María es una excelente cuidadora",
+                "stars": 5 
+            }
+            
+        ]
+        }
+    ],
+    "offers": [
+        {
+            "petName": "Booby",
+            "breed": "Corgi Galés",
+            "description": "Como inquilino de este conjunto residencial, entiendo la importancia de brindar atención y cuidado a nuestras adorables mascotas. Es por eso que quiero ofrecerles una emocionante oportunidad para cuidar a Booby, mi encantador perrito.\nBooby es un compañero leal y cariñoso que necesita paseos regulares y atención amorosa. Estoy buscando jóvenes entusiastas y responsables que estén dispuestos a sacar a pasear a Booby en horarios que se ajusten a su disponibilidad.\nComo cuidadores, les ofrezco una experiencia gratificante y divertida, permitiéndoles disfrutar de la compañía de un perro cariñoso mientras ganan un ingreso adicional. Les proporcionaré todas las indicaciones necesarias para el cuidado de Booby y estaré disponible para cualquier consulta o ayuda que necesiten.",
+            "date": "23/07/2023",
+            "payPerHour": 10000,
+            "startTime": "14:00",
+            "endTime": " 16:30"
+        }
+    ],
+    "scheduling": [
+        {
+            "Name": "María Giraldo",
+            "date": "19/06/2023",
+            "startTime": "14:00",
+            "endTime": "16:00"
+        },
+        {
+            "Name": "María Giraldo",
+            "date": "21/06/2023",
+            "startTime": "14:00",
+            "endTime": "16:00"
+        }
+    ],
+    "requests": [
+        {
+            "petName": "Booby",
+            "breed": "Corgi Galés",
+            "address": "Carrera 47 #1 - 95 Conjunto Residencial El Futuro",
+            "date": "12/07/2023",
+            "startTime": "17:30",
+            "endTime": " 18:20"
+        }
+    ]
+}

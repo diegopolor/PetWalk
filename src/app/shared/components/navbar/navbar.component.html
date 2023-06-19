@@ -1,0 +1,12 @@
+<nav>
+    <ul class="flex gap-5">
+        <li 
+            *ngFor="let item of listItem"
+            [routerLink]="item.link" 
+            routerLinkActive="text-black" 
+            class="text-bgSecundary font-bold text-base cursor-pointer" 
+        >
+            {{ item.name }}
+        </li>
+    </ul>
+</nav>
