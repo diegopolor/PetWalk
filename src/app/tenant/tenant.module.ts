@@ -16,7 +16,6 @@ import { ProfileImgPipe } from './pipes/profile-img.pipe';
     CreateOffersComponent,
     LayoutComponent,
     CaretakerCardComponent,
-
     ProfileImgPipe
   ],
   imports: [

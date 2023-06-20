@@ -1,7 +1,14 @@
 <main class="container m-auto">
 
     <section class="flex gap-5 items-center justify-center">
-        <caretaker-card />    
+           
     </section>
 
+    <li *ngFor="let item of caretakers$ | async">  
+        {{ item.fullName }}
+        <br>
+        {{ item.calification }}
+    </li>
+
+    <button (click)="sortAge()">aaaa</button>
 </main>

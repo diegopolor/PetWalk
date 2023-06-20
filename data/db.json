@@ -9,48 +9,48 @@
     ],
     "caretakers": [
         {
-        "id": "b63d9edc-4f5f-481c-aade-014f2106f842",
-        "fullName": "Ana Luz Garcia Quiróz",
-        "description": "Mi nombre es Ana Luz García Quiróz y soy una cuidadora apasionada por el bienestar de las mascotas. Con más de varios años de experiencia en el cuidado de animales, me dedico a brindarles amor y atención durante los paseos. Mi compromiso y dedicación son evidentes en cada interacción, siempre priorizando la seguridad y el confort de las mascotas. Soy paciente, responsable y presto atención a cada detalle para asegurarme de que disfruten de un paseo agradable y seguro. Mi conocimiento sobre el comportamiento animal y mi capacidad para establecer una conexión especial con ellos me convierten en una opción confiable y confiable para cuidar de tus queridas mascotas. Estoy emocionada de conocer a tu peludo amigo y brindarle el cuidado que se merece.",
-        "age": 25,
-        "ocupation": "Estudiante",
-        "calification": 4,
-        "avalible": [
-            {
-                "date": "19/06/2023",
-                "startTime": "08:00",
-                "endTime": "12:00"
-            },
-            {
-                "date": "19/06/2023",
-                "startTime": "18:00",
-                "endTime": "20:30"
-            },
-            {
-                "date": "20/06/2023",
-                "startTime": "08:00",
-                "endTime": "12:00"
-            },
-            {
-                "date": "21/06/2023",
-                "startTime": "18:00",
-                "endTime": "20:30"
-            },
-            {
-                "date": "21/06/2023",
-                "startTime": "14:00",
-                "endTime": "16:00"
-            }
-        ],
-        "hourly rate": "8000",
-        "comments" : [
-            {
-                "name": "Rigoberto Martínez",
-                "comment": "Los cuidados de Ana Luz son excepcionales!!",
-                "stars": 4
-            }
-            
-        ]
+            "id": "b63d9edc-4f5f-481c-aade-014f2106f842",
+            "fullName": "Ana Luz Garcia Quiróz",
+            "description": "Mi nombre es Ana Luz García Quiróz y soy una cuidadora apasionada por el bienestar de las mascotas. Con más de varios años de experiencia en el cuidado de animales, me dedico a brindarles amor y atención durante los paseos. Mi compromiso y dedicación son evidentes en cada interacción, siempre priorizando la seguridad y el confort de las mascotas. Soy paciente, responsable y presto atención a cada detalle para asegurarme de que disfruten de un paseo agradable y seguro. Mi conocimiento sobre el comportamiento animal y mi capacidad para establecer una conexión especial con ellos me convierten en una opción confiable y confiable para cuidar de tus queridas mascotas. Estoy emocionada de conocer a tu peludo amigo y brindarle el cuidado que se merece.",
+            "age": 25,
+            "ocupation": "Estudiante",
+            "calification": 4,
+            "avalible": [
+                {
+                    "date": "19/06/2023",
+                    "startTime": "08:00",
+                    "endTime": "12:00"
+                },
+                {
+                    "date": "19/06/2023",
+                    "startTime": "18:00",
+                    "endTime": "20:30"
+                },
+                {
+                    "date": "20/06/2023",
+                    "startTime": "08:00",
+                    "endTime": "12:00"
+                },
+                {
+                    "date": "21/06/2023",
+                    "startTime": "18:00",
+                    "endTime": "20:30"
+                },
+                {
+                    "date": "21/06/2023",
+                    "startTime": "14:00",
+                    "endTime": "16:00"
+                }
+            ],
+            "hourlyRate": "8000",
+            "comments" : [
+                {
+                    "name": "Rigoberto Martínez",
+                    "comment": "Los cuidados de Ana Luz son excepcionales!!",
+                    "stars": 4
+                }
+
+            ]
         },
         {
         "id": "92917c76-8ae0-4d5a-a1e0-130c70a26e60",
@@ -71,7 +71,7 @@
                 "endTime": "20:30"
             }
         ],
-        "hourly rate": "8000",
+        "hourlyRate": "8000",
         "comments" : [
             {
                 "name": "Eugenia Pérez",
@@ -100,7 +100,7 @@
                 "endTime": "20:30"
             }
         ],
-        "hourly rate": "9000",
+        "hourlyRate": "9000",
         "comments" : [
             {
                 "name": "Rosa Esmeralda Ortiz",
@@ -129,7 +129,7 @@
                 "endTime": "20:30"
             }
         ],
-        "hourly rate": "1000",
+        "hourlyRate": "1000",
         "comments" : [
             {
                 "name": "Osvalo Medina",
@@ -173,7 +173,7 @@
                 "endTime": "16:00"
             }
         ],
-        "hourly rate": "10000",
+        "hourlyRate": "10000",
         "comments" : [
             {
                 "name": "Christina Marcerla Armadea",
