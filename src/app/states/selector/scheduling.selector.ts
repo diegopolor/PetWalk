@@ -1,21 +1,21 @@
 import { createSelector } from '@ngrx/store'
 import { AppState } from '../app.state'
-import { CaretakersState } from 'src/app/core/models/caretaker.state'
+import { SchedulingState } from 'src/app/core/models/scheduling.state'
 
 
-const selectCaretaker = (state: AppState) => state.caretakers
+const selectCaretaker = (state: AppState) => state.schedulings
 
 export const selectCaretakerLoading = createSelector(
     selectCaretaker,
-    (state: CaretakersState) => state.loading
+    (state: SchedulingState) => state.loading
 )
 
 export const selectCaretakerError = createSelector(
     selectCaretaker,
-    (state: CaretakersState) => state.error
+    (state: SchedulingState) => state.error
 )
 
 export const selectCaretakers = createSelector(
     selectCaretaker,
-    (state: CaretakersState) => state.caretakerList
+    (state: SchedulingState) => state.schedulingList
 )

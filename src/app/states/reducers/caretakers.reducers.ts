@@ -2,14 +2,14 @@ import { createReducer, on } from '@ngrx/store'
 import { CaretakersState } from 'src/app/core/models/caretaker.state'
 import { 
     listAllCaretakers, 
-    filterSortAZCaretakers, 
-    filterSortZACaretakers,
-    filterByHighestStars,
-    filterByLowestStars, 
+    sortAZCaretakers, 
+    sortZACaretakers,
+    sortByHighestStars,
+    sortByLowestStars, 
     loadedCaretakers,
-    errorloadedCaretakers 
+    errorloadedCaretakers, 
+    filterByIdCaretakers
 } from '../actions/caretakers.actions'
-
 
 
 const initialState: CaretakersState = {
@@ -20,11 +20,15 @@ const initialState: CaretakersState = {
 
 export const caretakersRoducer = createReducer(
     initialState,
-    on(listAllCaretakers, state => ({ ...state, loading: true })),
-    on(filterSortAZCaretakers, state => ({ ...state, loading: true })),
-    on(filterSortZACaretakers, state => ({ ...state, loading: true })),
-    on(filterByHighestStars, state =>   ({ ...state, loading: true })),
-    on(filterByLowestStars, state =>    ({ ...state, loading: true })),
-    on(loadedCaretakers, (state, { caretakerList }) => ({ ...state, caretakerList,loading: false })),
+    on( 
+        listAllCaretakers,
+        filterByIdCaretakers,
+        sortAZCaretakers,
+        sortZACaretakers,
+        sortByHighestStars,
+        sortByLowestStars, 
+        state => ({ ...state, loading: true })
+    ),
+    on(loadedCaretakers, (state, { caretakerList }) => ({ ...state, caretakerList, loading: false })),
     on(errorloadedCaretakers, state => ({ ...state,  error: true, loading: false })),
 ) 

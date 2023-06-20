@@ -1,18 +1,24 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { Caretaker } from 'src/app/core/models/caretaker.interface';
 
 
 @Injectable({
     providedIn: 'root'
 })
-export class TenantService {
+export class CaretakerService {
 
     constructor(private http: HttpClient){}
 
     getAllCaretakers(){
         return this.http.get<Caretaker[]>('http://localhost:3000/caretakers')
     }
+
+    getCaretakersById(id: number){
+        return this.http.get<Caretaker[]>(`http://localhost:3000/caretakers?id=${id}`)
+    }
+
 
     filterSortAZCaretakers(){
         return this.http.get<Caretaker[]>('http://localhost:3000/caretakers?_sort=fullName&_order=asc')
@@ -33,10 +39,4 @@ export class TenantService {
     filterSortAgeCaretakers(age: number){
         return this.http.get<Caretaker[]>(`http://localhost:3000/caretakers?age=${age}`)
     }
-
-
-   
-    
-
-
 }

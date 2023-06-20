@@ -9,11 +9,12 @@ import {
 
 import { 
   listAllCaretakers, 
-  filterSortAZCaretakers, 
-  filterSortZACaretakers,
-  filterByHighestStars,
-  filterByLowestStars,
-  filterAgeCaretakers
+  sortAZCaretakers, 
+  sortZACaretakers,
+  sortByHighestStars,
+  sortByLowestStars,
+  filterAgeCaretakers,
+  filterByIdCaretakers
 } from 'src/app/states/actions/caretakers.actions';
 
 import { AppState } from 'src/app/states/app.state';
@@ -41,22 +42,26 @@ export class CaretakersListComponent implements OnInit{
   }
 
   sortAZ(){
-    this.store.dispatch(filterSortAZCaretakers())
+    this.store.dispatch(sortAZCaretakers())
   }
 
   sortZA(){
-    this.store.dispatch(filterSortZACaretakers())
+    this.store.dispatch(sortZACaretakers())
   }
 
   highStars(){
-    this.store.dispatch(filterByHighestStars())
+    this.store.dispatch(sortByHighestStars())
   }
 
   lowestStars(){
-    this.store.dispatch(filterByLowestStars())
+    this.store.dispatch(sortByLowestStars())
   }
 
-  sortAge(){
+  findByAge(){
     this.store.dispatch(filterAgeCaretakers({age: 20 }))
+  }
+
+  findById(){
+    this.store.dispatch(filterByIdCaretakers({id: '92917c76-8ae0-4d5a-a1e0-130c70a26e60' }))
   }
 }
