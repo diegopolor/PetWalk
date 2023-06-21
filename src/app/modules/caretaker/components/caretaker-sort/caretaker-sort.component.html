@@ -1,0 +1,13 @@
+<div class="relative inline-block text-left">
+    <button class="text-small flex items-center" (click)="toggleSortMenu()">
+        <i class="fas fa-sort mr-2"></i> Ordenar
+    </button>
+    <div class="absolute right-0 mt-2 py-2 w-64 p-5 flex flex-col gap-2 bg-bgGeneric rounded shadow-lg" [class.invisible]="!isOpenSortMenu">      
+        <button 
+          *ngFor="let option of sortOptions" 
+          (click)="option.onClic()" class="text-small"
+        >
+          <i class="fas {{ option.iconName }}"></i> {{ option.name }}
+        </button>
+    </div>
+</div>

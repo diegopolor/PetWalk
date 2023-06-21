@@ -1,0 +1,16 @@
+<div class="flex flex-col">         
+    <div class="flex gap-2 justify-between w-full">
+        <img 
+            class="rounded-full max-h-maxPhotoCmmt"
+            [src]="comment.image | caretakerProfileImg" 
+            width="50px" 
+            height="50px"
+            alt="Comentario de {{ comment.name }}"
+        />
+        <div class="w-1/8 flex flex-col">
+            <span class="text-small font-semibold"> {{ comment.name }} </span>
+            <span class="text-small">{{ comment.comment }}</span>
+            <star-box [count]="comment.stars" />
+        </div>    
+    </div>       
+</div>

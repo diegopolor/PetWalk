@@ -1,6 +1,7 @@
 export const caretakersActions = {
     listAll:     '[ Caretaker List ] List All',
     byId:        '[ Caretaker List ] List By ID',
+    byName:      '[ Caretaker List ] Filter By Name',
     sortAZ:      '[ Caretaker List ] Sort A-Z',
     sortZA:      '[ Caretaker List ] Sort Z-A',
     highStars:   '[ Caretaker List ] Sort High Stars',

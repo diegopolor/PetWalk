@@ -5,7 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
 
 import { offersActions } from '../actions/actions-name';
-import { OfferService } from 'src/app/core/services/offer.service';
+import { OfferService } from 'src/app/shared/services/offer.service';
 
 
 @Injectable()

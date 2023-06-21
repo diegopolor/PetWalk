@@ -4,6 +4,7 @@ import { Caretaker } from 'src/app/core/models/caretaker.interface'
 
 const { 
     listAll, 
+    byName,
     byId,
     sortAZ, 
     sortZA, 
@@ -15,6 +16,7 @@ const {
 } = caretakersActions
 
 export const listAllCaretakers       =    createAction(listAll)
+export const filterByName            =    createAction(byName, props<{ name: string }>())
 export const filterByIdCaretakers    =    createAction(byId, props<{id : string}>())
 export const sortAZCaretakers        =    createAction(sortAZ)
 export const sortZACaretakers        =    createAction(sortZA)

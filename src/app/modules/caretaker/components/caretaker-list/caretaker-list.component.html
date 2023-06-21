@@ -1,0 +1,6 @@
+<section class="flex gap-5 items-center">
+         <caretaker-card 
+            *ngFor="let item of caretakerList$ | async"
+            [caretaker]="item" 
+        />  
+</section>

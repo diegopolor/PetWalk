@@ -5,7 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
 
 import { requestActions } from '../actions/actions-name';
-import { RequestService } from "src/app/core/services/request.service";
+import { RequestService } from "src/app/shared/services/request.service";
 
 
 @Injectable()

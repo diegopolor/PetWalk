@@ -2,8 +2,6 @@ import { createAction, props } from "@ngrx/store";
 import { requestActions } from "./actions-name";
 import { Request } from "src/app/core/models/request.interface";
 
-
-
 const { listAll, byDate, byPetName, loaded, error } = requestActions
 
 export const listAllRequest              =     createAction(listAll)

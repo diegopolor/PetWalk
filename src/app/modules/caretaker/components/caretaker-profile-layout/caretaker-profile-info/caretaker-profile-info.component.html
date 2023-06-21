@@ -1,0 +1,22 @@
+<aside class="min-w-minProfile max-w-maxProfile bg-bgWhite p-8 flex flex-col gap-5 rounded-2xl h-full">
+    <div class="flex justify-center">
+        <img class="rounded-full" [src]="caretaker.id | profileImg" width="150" alt="profile">
+    </div>  
+    <h2>{{ caretaker.fullName }}</h2>
+    <div>
+        <p class="text-small">Cobro por hora:</p>
+        <p class="text-small">{{ caretaker.hourlyRate  | currency}} COP</p>
+    </div>
+    <div>
+        <p class="text-small">Edad:</p>
+        <p class="text-small">{{ caretaker.age }} Años</p>
+    </div>
+    <div>
+        <p class="text-small">Ocupación:</p>
+        <p class="text-small">{{ caretaker.ocupation }}</p>
+    </div>
+    <div>   
+        <p class="text-small">calificatión</p>
+        <star-box [count]="caretaker.calification" />
+    </div>
+</aside>

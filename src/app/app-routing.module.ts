@@ -5,8 +5,8 @@ import { AppComponent } from "./app.component";
 
 const routes: Routes = [
     {
-        path: 'tenant',
-        loadChildren: ()=> import('./tenant/tenant.module').then(m => m.TenantModule)
+        path: 'caretakers',
+        loadChildren: ()=> import('./modules/caretaker/caretaker.module').then(m => m.CaretakerModule)
     }, 
     {
         path : '',

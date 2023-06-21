@@ -1,0 +1,7 @@
+<main class="contain flex flex-col items-center m-auto">
+    <caretaker-filter class="w-full" />
+    <caretaker-list class="w-full" [caretakerList$]="caretakers$" />
+    <ng-container *ngIf="(caretakers$ | async) as caretaker">
+        <p *ngIf="caretaker.length < 1" >No se encontraron resultados para mostrar </p>
+    </ng-container>  
+</main>

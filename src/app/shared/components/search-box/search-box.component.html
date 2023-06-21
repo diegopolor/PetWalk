@@ -1,0 +1,12 @@
+<div class="rounded-full bg-bgGeneric h-10 text-small p-5 gap-4 flex items-center">
+    <i class="text-white fas fa-search"></i>
+    <input 
+        #searchInput 
+        class="bg-bgGeneric focus:outline-none" 
+        type="text" 
+        placeholder="Buscar Nombre de cuidador"
+        [value]="searchInput.value"
+        (keyup.enter)="valueEmmiter()"
+    />
+    <button (click)="valueEmmiter()" class="">Buscar</button>
+</div>

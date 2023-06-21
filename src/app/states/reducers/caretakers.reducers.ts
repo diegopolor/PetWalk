@@ -8,7 +8,8 @@ import {
     sortByLowestStars, 
     loadedCaretakers,
     errorloadedCaretakers, 
-    filterByIdCaretakers
+    filterByIdCaretakers,
+    filterByName
 } from '../actions/caretakers.actions'
 
 
@@ -22,6 +23,7 @@ export const caretakersRoducer = createReducer(
     initialState,
     on( 
         listAllCaretakers,
+        filterByName,
         filterByIdCaretakers,
         sortAZCaretakers,
         sortZACaretakers,

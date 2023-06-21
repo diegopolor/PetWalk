@@ -1,0 +1,7 @@
+<div class="w-full h-20 flex gap-5 items-center">
+    <search-box (onValue)="findByName($event)" /> 
+    <caretaker-sort />
+    <button class="text-small" (click)="resetData()">
+        <i class="fas fa-sync-alt"></i> Refrescar
+    </button>
+</div>

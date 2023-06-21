@@ -5,8 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import { of, Observable, mergeMap, switchMap, EMPTY } from 'rxjs';
 
 import { caretakersActions } from '../actions/actions-name';
-import { CaretakerService } from '../../core/services/caretaker.service';
-
+import { CaretakerService } from "src/app/modules/caretaker/services/caretaker.service";
 @Injectable()
 export class CaretakerEffect {
 
@@ -30,7 +29,6 @@ export class CaretakerEffect {
           )
       );
     }
-
 
     loadCaretakerAllEffect$ = this.createCustomEffect(
         caretakersActions.listAll,
@@ -67,13 +65,16 @@ export class CaretakerEffect {
         this.actions$.pipe(
           ofType(
             caretakersActions.sortAge,
-            caretakersActions.byId
+            caretakersActions.byId,
+            caretakersActions.byName
           ),
           switchMap((action: any) => {
             if (action.type === caretakersActions.sortAge) {
               return this.caretakerService.filterSortAgeCaretakers(action?.age);
             } else if (action.type === caretakersActions.byId) {
               return this.caretakerService.getCaretakersById(action?.id);
+            } else if (action.type === caretakersActions.byName) {
+              return this.caretakerService.getCaretakerByName(action?.name);
             }
             return EMPTY;
           }),

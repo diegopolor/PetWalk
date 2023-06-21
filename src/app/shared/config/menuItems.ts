@@ -3,7 +3,7 @@ import { ModuleName, NavbarItem } from "src/app/shared/interfaces/navbar.interfa
 export const tenantMenuItems: NavbarItem[] = [
   {
     name: 'Cuidadores',
-    link: 'caretakers-list'
+    link: '/caretakers'
   },
   {
     name: 'Agendamientos',

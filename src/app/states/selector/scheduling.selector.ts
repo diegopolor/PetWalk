@@ -3,19 +3,19 @@ import { AppState } from '../app.state'
 import { SchedulingState } from 'src/app/core/models/scheduling.state'
 
 
-const selectCaretaker = (state: AppState) => state.schedulings
+const selectScheduling = (state: AppState) => state.schedulings
 
 export const selectCaretakerLoading = createSelector(
-    selectCaretaker,
+    selectScheduling,
     (state: SchedulingState) => state.loading
 )
 
 export const selectCaretakerError = createSelector(
-    selectCaretaker,
+    selectScheduling,
     (state: SchedulingState) => state.error
 )
 
 export const selectCaretakers = createSelector(
-    selectCaretaker,
+    selectScheduling,
     (state: SchedulingState) => state.schedulingList
 )

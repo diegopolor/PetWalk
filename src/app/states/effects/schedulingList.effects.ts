@@ -1,19 +1,39 @@
-import { Actions,createEffect, ofType } from '@ngrx/effects';
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { Action } from '@ngrx/store';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, catchError } from 'rxjs/operators';
-import { of, switchMap, EMPTY  } from 'rxjs';
+import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
 
 import { schedulingActions } from '../actions/actions-name';
-import { SchedulingService } from 'src/app/core/services/scheduling.service';
-import { createCustomEffect } from '../helpers/createEffect';
+import { SchedulingService } from 'src/app/shared/services/scheduling.service';
 
 
 @Injectable()
 export class SchedulingEffect {
 
-    loadSchedulingAllEffect$ = createCustomEffect(
+    /**
+    * Crea un efecto para manejar acciones específicas y realizar operaciones asincrónicas.
+    *
+    * @param actionType El tipo de acción que activará el efecto.
+    * @param serviceMethod La función que representa la operación asincrónica a realizar.
+    * @returns Un observable que emite acciones de carga exitosa o de error.
+    */
+        createCustomEffect = (actionType: string, serviceMethod: () => Observable<any>): Observable<Action> =>{
+          return createEffect(() =>
+            this.actions$.pipe(
+                  ofType(actionType),
+                  mergeMap(() =>
+                    serviceMethod().pipe(
+                      map(schedulingList => ({ type: schedulingActions.loaded, schedulingList })),
+                      catchError(() => of({ type: schedulingActions.error }))
+                    )
+                  )
+              )
+          );
+      }
+
+    loadSchedulingAllEffect$ = this.createCustomEffect(
         schedulingActions.listAll,
-        schedulingActions,
         () => this.schedulingService.getAllScheduling()
     );
     
