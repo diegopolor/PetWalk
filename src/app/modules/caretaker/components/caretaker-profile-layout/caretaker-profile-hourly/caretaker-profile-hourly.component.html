@@ -1,10 +1,14 @@
 <section class="max-w-2xl  bg-bgWhite flex flex-col gap-5 p-5 rounded-2xl">
     <h2 class="font-semibold">Disponibilidad horaría</h2>
-    <div class=" flex gap-5 shrink">
-        <div class="w-32  text-small rounded-2xl text-white flex flex-col p-5 items-center bg-primary" *ngFor="let item of caretaker.available">
+    <div class=" flex gap-5 shrink overflow-auto">
+        <div class="min-w-minHourly h-32 text-small rounded-2xl text-white flex flex-col justify-center items-center bg-primary" 
+            *ngFor="let item of caretaker.available"
+        >
             <p class="font-semibold">{{ item.date }} </p>
             <p>{{ item.startTime }} - {{ item.endTime }} </p>
-            <button class="mt-2 w-full p-1 rounded-xl bg-white text-bgSecundary">Angendar</button>
+            <button class="w-9/12 mt-2 p-1 rounded-xl bg-white text-bgSecundary">
+                Angendar
+            </button>
         </div>
     </div>
 </section>

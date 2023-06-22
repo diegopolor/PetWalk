@@ -1,0 +1,7 @@
+<section class="flex gap-5">
+    <request-card 
+        *ngFor="let request of requests$ | async"
+        [request]="request"
+     />
+
+</section>

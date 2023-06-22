@@ -1,0 +1,13 @@
+<aside class=" bg-bgPrimary w-full md:min-w-generic md:max-w-generic min-h-layout-offer rounded-2xl p-8">     
+    <div class="flex flex-col items-center ">
+        <img 
+            class="w-36 h-36 object-cover rounded-full" 
+            [src]="offer.id | profileImg" alt=""
+        />
+        <span class="font-semibold mt-5">  {{ offer.petName }} </span>
+        <div class="text-center text-base mt-20 text-bgSecundary">
+            <p class="font-semibold">Raza:</p>
+            <p >{{ offer.breed }}</p>
+        </div>
+    </div>  
+</aside>

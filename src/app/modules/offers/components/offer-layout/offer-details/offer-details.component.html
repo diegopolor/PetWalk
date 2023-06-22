@@ -1,0 +1,11 @@
+<aside class="w-full md:max-w-asideRight md:min-w-asideRight md:min-h-layout-offer  bg-bgPrimary p-6">
+    <div class="flex flex-col gap-10 ">
+         <h2 class="font-semibold">Oferta</h2>
+         <div class="flex flex-col gap-5">
+             <p class="text-small">Pasear a booby con una disponibilidad horaria de {{offer.startTime}} a {{offer.endTime}}. </p>
+             <p class="text-small">Fecha: {{ offer.date | dateTransform }}</p>
+             <p class="text-small">Dirección: {{ offer.address }} </p>        
+         </div>
+         <btn-primary class="text-small" text="Aceptar Oferta"  />
+    </div>
+ </aside>

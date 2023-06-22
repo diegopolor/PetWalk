@@ -1,0 +1,9 @@
+<input 
+    #InputNumber
+    [disabled]="disabled"
+    class="w-full p-2 text-small bg-bgGeneric rounded-lg outline-none" 
+    type="number" 
+    [placeholder]="placeholder"
+    [value]="value | currency"
+    (keydown)="valueEmmiter()"
+/>

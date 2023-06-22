@@ -4,8 +4,7 @@ import { OffersState } from "src/app/core/models/offers.state";
 import {
     listAllOffers,
     filerByIdOffers,
-    filterByRangePriceOffers,
-    filterByDateOffers,
+    filterByDate,
     sortByHighPayOffers,
     sortByLowPayOffers,
     loadedOffers,
@@ -15,7 +14,7 @@ import {
 const initialState: OffersState = {
     error: false,
     loading: false,
-    offerList : []
+    offersList : []
 }
 
 export const offersRoducer = createReducer(
@@ -23,12 +22,11 @@ export const offersRoducer = createReducer(
     on( 
         listAllOffers,
         filerByIdOffers,
-        filterByRangePriceOffers,
-        filterByDateOffers,
+        filterByDate,
         sortByHighPayOffers,
         sortByLowPayOffers,
         state => ({ ...state, loading: true })
     ),
-    on(loadedOffers, (state, { offerList }) => ({ ...state, offerList, loading: false })),
+    on(loadedOffers, (state, { offersList }) => ({ ...state, offersList, loading: false })),
     on(errorOffers, state => ({ ...state,  error: true, loading: false })),
 ) 

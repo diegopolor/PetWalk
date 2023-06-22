@@ -1,0 +1,11 @@
+<div class="contain m-auto py-5">
+    <btn-back route="caretakers"/>
+</div>
+<main class="contain flex flex-col md:flex-row  gap-5 m-auto w-full h-full my-5">
+    <caretaker-profile-info [caretaker]="caretaker" />
+    <div class="w-full flex flex-col gap-3">
+        <caretaker-profile-description class="h-full" [caretaker]="caretaker" />
+        <caretaker-profile-hourly [caretaker]="caretaker" />
+    </div>
+    <caretaker-profile-comments [caretaker]="caretaker" />
+</main>

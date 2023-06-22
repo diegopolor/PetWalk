@@ -5,7 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
 
 import { schedulingActions } from '../actions/actions-name';
-import { SchedulingService } from 'src/app/shared/services/scheduling.service';
+import { SchedulingService } from 'src/app/modules/scheduling/services/scheduling.service';
 
 
 @Injectable()

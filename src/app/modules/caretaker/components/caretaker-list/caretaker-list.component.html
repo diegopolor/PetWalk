@@ -1,5 +1,6 @@
-<section class="flex gap-5 items-center">
+<section class="flex flex-col my-10 md:flex-row gap-5 sm:flex-row flex-wrap items-center">
          <caretaker-card 
+            class=""
             *ngFor="let item of caretakerList$ | async"
             [caretaker]="item" 
         />  

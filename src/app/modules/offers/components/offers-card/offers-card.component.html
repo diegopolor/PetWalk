@@ -1,0 +1,14 @@
+<div class="bg-bgPrimary w-full p-10 flex flex-col gap-5 items-center rounded-2xl">
+    <img 
+        class="rounded-full object-cover w-imgOffer h-imgOffer" 
+        [src]="offer.id | profileImg" 
+        [alt]="offer.petName" 
+    />
+    <div class="mt-10 flex text-center flex-col">
+        <span class="font-semibold text-base">{{ offer.petName }}</span> 
+        <span class="text-small">{{ offer.breed }}</span> 
+    </div>
+    <span class="text-small text-bgSecundary"> {{ offer.date }} {{ offer.startTime }} - {{ offer.endTime }}</span>
+    <span class="text-small text-bgSecundary"> {{ offer.payPerHour | currency}} COP </span>
+    <btn-ghost text="Ver Oferta" (click)="showOffer(offer.id)"/>
+</div>

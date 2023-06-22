@@ -9,8 +9,8 @@ import { CaretakerCardComponent } from './components/caretaker-card/caretaker-ca
 import { ProfileImgPipe } from './pipes/profile-img.pipe';
 import { CaretakerListComponent } from './components/caretaker-list/caretaker-list.component';
 import { CaretakerFilterComponent } from './components/caretaker-filter/caretaker-filter.component';
-import { CaretakerProfilePageComponent } from './pages/caretaker-profile/caretaker-profile-page.component';
-import { CaretakersListPageComponent } from './pages/caretakers-list/caretakers-list-page.component';
+import { CaretakerProfilePageComponent } from './pages/caretaker-profile-page/caretaker-profile-page.component';
+import { CaretakersListPageComponent } from './pages/caretakers-list-page/caretakers-list-page.component';
 import { CaretakerSortComponent } from './components/caretaker-sort/caretaker-sort.component';
 import { CaretakerProfileInfoComponent } from './components/caretaker-profile-layout/caretaker-profile-info/caretaker-profile-info.component';
 import { CaretakerProfileDescriptionComponent } from './components/caretaker-profile-layout/caretaker-profile-description/caretaker-profile-description.component';

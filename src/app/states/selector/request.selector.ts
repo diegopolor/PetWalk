@@ -5,17 +5,17 @@ import { RequestState } from 'src/app/core/models/request.state'
 
 const selectRequest = (state: AppState) => state.requests
 
-export const selectCaretakerLoading = createSelector(
+export const selectRequestLoading = createSelector(
     selectRequest,
     (state: RequestState) => state.loading
 )
 
-export const selectCaretakerError = createSelector(
+export const selectRequestError = createSelector(
     selectRequest,
     (state: RequestState) => state.error
 )
 
-export const selectCaretakers = createSelector(
+export const selectRequests = createSelector(
     selectRequest,
     (state: RequestState) => state.requestList
 )

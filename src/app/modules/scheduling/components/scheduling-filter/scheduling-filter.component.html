@@ -1,0 +1,18 @@
+<div class="flex min-w-min w-1/2 items-center gap-10 rounded-2xl bg-bgPrimary p-5 overflow-auto">
+    <span class="text-base text-bgSecundary font-semibold">Aplicar filtros: </span>
+    <select 
+        #SelectPet 
+        class="text-small p-2 bg-bgGeneric rounded-md"
+        (change)="filterByCaretaker()"
+    >
+        <option disabled selected value=""> Nombre del cuidador</option>
+        <option 
+            *ngFor="let option of schedulings$ | async" 
+            [value]="option.name"
+        >
+        {{ option.name }}
+        </option>
+    </select>
+    <inpt-custom (onValue)="filterByDate($event)" type="date" />
+    <btn-refresh (click)="resetData()" />
+</div>

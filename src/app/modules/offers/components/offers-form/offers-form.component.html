@@ -1,0 +1,17 @@
+<section class=" bg-bgPrimary min-h-layout-offer rounded-2xl p-10">
+    <h2 class="font-semibold mb-5">Crear Oferta</h2>
+    <form class="flex flex-col gap-5 ">
+        <inpt-custom [disabled]="true" type="text" placeholder="Nombre de la mascota" />
+        <inpt-custom [disabled]="true" type="text" placeholder="Raza de la mascota" />
+        <div class="w-full flex gap-5">
+            <inpt-custom [disabled]="true" class="w-full" type="date" />
+            <inpt-number [disabled]="true"class="w-full" placeholder="Pago por hora" />
+        </div>
+       <div class="flex gap-5">
+            <inpt-custom [disabled]="true" class="w-full" type="time" />
+            <inpt-custom [disabled]="true" class="w-full"type="time" />
+       </div>
+       <inpt-text-area [disabled]="true" placeholder="Descripción de la oferta" />
+       <btn-primary type="button" class="text-right" text="Enviar" />
+    </form>
+</section>

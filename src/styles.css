@@ -10,4 +10,5 @@ body {
 
 .contain {
     width: 95% !important;
+    margin: auto !important;
 }

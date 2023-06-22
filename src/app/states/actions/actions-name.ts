@@ -12,28 +12,27 @@ export const caretakersActions = {
 }
 
 export const offersActions = {
-    listAll:        '[ Offers List ] List All',
-    byId:           '[ Offers List ] List By ID',
-    byRangePrice:   '[ Offers List ] Filter Range Price',
-    byDate:         '[ Offers List ] Filter By Date ',
-    highPay:        '[ Offers List ] Sort High Pay ',
-    lowPay:         '[ Offers List ] Sort Lowest Pay ',
-    loaded:         '[ Offers List ] Loaded Success',
-    error:          '[ Offers List ] Loaded Error',
+    listAll:    '[ Offers List ] List All',
+    byId:       '[ Offers List ] List By ID',
+    byDate:     '[ Offers List ] Filter By Date',
+    highPay:    '[ Offers List ] Sort High Pay ',
+    lowPay:     '[ Offers List ] Sort Lowest Pay ',
+    loaded:     '[ Offers List ] Loaded Success',
+    error:      '[ Offers List ] Loaded Error',
 }
 
 export const schedulingActions = {
-    listAll:        '[ Scheduling List ] List All',
-    byDate:         '[ Scheduling List ] Filter By Date ',
-    byCaretaker:    '[ Scheduling List ] Filter by Caretaker ',
-    loaded:         '[ Scheduling List ] Loaded Success',
-    error:          '[ Scheduling List ] Loaded Error',
+    listAll:     '[ Scheduling List ] List All',
+    byDate:      '[ Scheduling List ] Filter By Date ',
+    byCaretaker: '[ Scheduling List ] Filter by Caretaker ',
+    loaded:      '[ Scheduling List ] Loaded Success',
+    error:       '[ Scheduling List ] Loaded Error',
 }
 
 export const requestActions = {
-    listAll:        '[ Request List ] List All',
-    byDate:         '[ Request List ] Filter By Date ',
-    byPetName:      '[ Request List ] Filter by Pet Name ',
-    loaded:         '[ Request List ] Loaded Success',
-    error:          '[ Request List ] Loaded Error',
+    listAll:     '[ Request List ] List All',
+    byDate:      '[ Request List ] Filter By Date ',
+    byPetName:   '[ Request List ] Filter by Pet Name ',
+    loaded:      '[ Request List ] Loaded Success',
+    error:       '[ Request List ] Loaded Error',
 }

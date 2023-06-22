@@ -1,11 +1,13 @@
-<div class="flex flex-col items-center bg-bgPrimary p-5 rounded-3xl">
+<div class="flex flex-col w-full items-center bg-bgPrimary p-12 sm:p-10 md:p-5  rounded-3xl">
     <img 
         class="rounded-full" 
         [src]="caretaker.id | profileImg" 
-        width="133" 
+        width="133px" 
         alt=""
     />
-    <h2 class="font-semibold text-normal mt-10 min-w-minCard m-h-minCard text-center">{{ caretaker.fullName }}</h2>
+    <h2 class="font-semibold text-normal mt-10 min-w-minCard m-h-minCard text-center">
+        {{ caretaker.fullName }}
+    </h2>
     <span class="text-bgSecundary text-small" >{{ caretaker.age }} años</span>
     <span class="text-bgSecundary text-small" >{{ caretaker.ocupation }}</span>
     <star-box [count]="caretaker.calification" />

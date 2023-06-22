@@ -185,8 +185,9 @@
             "id": "7987e6e-7515-470a-b91b-9b2f8015fd46",
             "petName": "Booby",
             "breed": "Corgi Galés",
-            "description": "Como inquilino de este conjunto residencial, entiendo la importancia de brindar atención y cuidado a nuestras adorables mascotas. Es por eso que quiero ofrecerles una emocionante oportunidad para cuidar a Booby, mi encantador perrito.\nBooby es un compañero leal y cariñoso que necesita paseos regulares y atención amorosa. Estoy buscando jóvenes entusiastas y responsables que estén dispuestos a sacar a pasear a Booby en horarios que se ajusten a su disponibilidad.\nComo cuidadores, les ofrezco una experiencia gratificante y divertida, permitiéndoles disfrutar de la compañía de un perro cariñoso mientras ganan un ingreso adicional. Les proporcionaré todas las indicaciones necesarias para el cuidado de Booby y estaré disponible para cualquier consulta o ayuda que necesiten.",
-            "date": "23/07/2023",
+            "description": "Como inquilino de este conjunto residencial, entiendo la importancia de brindar atención y cuidado a nuestras adorables mascotas. Es por eso que quiero ofrecerles una emocionante oportunidad para cuidar a Booby, mi encantador perrito.\nBooby es un compañero leal y cariñoso que necesita paseos regulares y atención amorosa. Estoy buscando jóvenes entusiastas y responsables que estén dispuestos a sacar a pasear a Booby en horarios que se ajusten a su disponibilidad.\n\nComo cuidadores, les ofrezco una experiencia gratificante y divertida, permitiéndoles disfrutar de la compañía de un perro cariñoso mientras ganan un ingreso adicional. Les proporcionaré todas las indicaciones necesarias para el cuidado de Booby y estaré disponible para cualquier consulta o ayuda que necesiten.",
+            "date": "2023-06-15",
+            "address": "Carrera 47 #1 - 95 Conjunto Residencial El Futuro",
             "payPerHour": 10000,
             "startTime": "14:00",
             "endTime": " 16:30"
@@ -195,13 +196,13 @@
     "scheduling": [
         {
             "name": "María Giraldo",
-            "date": "19/06/2023",
+            "date": "2023-06-19",
             "startTime": "14:00",
             "endTime": "16:00"
         },
         {
             "name": "María Giraldo",
-            "date": "21/06/2023",
+            "date": "2023-06-21",
             "startTime": "14:00",
             "endTime": "16:00"
         }
@@ -212,9 +213,10 @@
             "petName": "Booby",
             "breed": "Corgi Galés",
             "address": "Carrera 47 #1 - 95 Conjunto Residencial El Futuro",
-            "date": "12/07/2023",
+            "date": "2023-07-12",
             "startTime": "17:30",
             "endTime": " 18:20"
         }
+        
     ]
 }

@@ -1,7 +1,12 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { SortOptions } from 'src/app/shared/interfaces/sortOptions.intertface';
-import { sortAZCaretakers, sortByHighestStars, sortByLowestStars, sortZACaretakers } from 'src/app/states/actions/caretakers.actions';
+import { 
+  sortAZCaretakers, 
+  sortByHighestStars, 
+  sortByLowestStars, 
+  sortZACaretakers 
+} from 'src/app/states/actions/caretakers.actions';
 
 @Component({
   selector: 'caretaker-sort',
@@ -32,21 +37,8 @@ export class CaretakerSortComponent {
     }
   ]
 
-  isOpenSortMenu = false
-
   constructor(
     private store: Store,
-    private elementRef: ElementRef
   ){}
   
-  @HostListener ('document:click', ['$event'])
-  onDocumentClick(event: MouseEvent) {
-    if (!this.elementRef.nativeElement.contains(event.target)) {
-      this.isOpenSortMenu = false
-    }
-  }
-
-  toggleSortMenu(){
-    this.isOpenSortMenu = !this.isOpenSortMenu
-  }
 }

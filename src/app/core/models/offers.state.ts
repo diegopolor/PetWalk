@@ -2,7 +2,7 @@
 import { Offers } from "./offers.interface";
 
 export interface OffersState {
-    offerList :      Offers[]
+    offersList :     Offers[]
     loading:         boolean
     error:           boolean
 }

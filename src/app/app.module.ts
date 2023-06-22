@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ROOT_REDUCERS } from './states/app.state';
 import { CaretakerEffect } from './states/effects/caretaker.effects';
+import { OfferEffect } from './states/effects/offer.effects';
+import { SchedulingEffect } from './states/effects/schedulingList.effects';
+import { RequestEffect } from './states/effects/request.effects';
 
 
 @NgModule({
@@ -22,7 +25,7 @@ import { CaretakerEffect } from './states/effects/caretaker.effects';
     HttpClientModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({ name: 'Debug' }),
-    EffectsModule.forRoot([CaretakerEffect])
+    EffectsModule.forRoot([CaretakerEffect, OfferEffect, SchedulingEffect, RequestEffect])
   ],
   providers: [],
   bootstrap: [ AppComponent ]

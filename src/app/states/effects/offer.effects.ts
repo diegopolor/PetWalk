@@ -5,7 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
 
 import { offersActions } from '../actions/actions-name';
-import { OfferService } from 'src/app/shared/services/offer.service';
+import { OfferService } from 'src/app/modules/offers/services/offer.service';
 
 
 @Injectable()
@@ -19,17 +19,17 @@ export class OfferEffect {
     * @returns Un observable que emite acciones de carga exitosa o de error.
     */
     createCustomEffect = (actionType: string, serviceMethod: () => Observable<any>): Observable<Action> =>{
-        return createEffect(() =>
-          this.actions$.pipe(
-                ofType(actionType),
-                mergeMap(() =>
-                  serviceMethod().pipe(
-                    map(offerList => ({ type: offersActions.loaded, offerList })),
-                    catchError(() => of({ type: offersActions.error }))
-                  )
+      return createEffect(() =>
+        this.actions$.pipe(
+              ofType(actionType),
+              mergeMap(() =>
+                serviceMethod().pipe(
+                  map(offersList => ({ type: offersActions.loaded, offersList })),
+                  catchError(() => of({ type: offersActions.error }))
                 )
-            )
-        );
+              )
+          )
+      );
     }
 
     loadOffersAllEffect$ = this.createCustomEffect(
@@ -57,22 +57,19 @@ export class OfferEffect {
     loadOfferffects$ = createEffect(() =>
         this.actions$.pipe(
           ofType(
-            offersActions.byDate,
             offersActions.byId,
-            offersActions.byRangePrice,
+            offersActions.byDate,
 
           ),
           switchMap((action: any) => {
             if (action.type === offersActions.byId) {
               return this.offerService.filterById(action?.id);
             } else if (action.type === offersActions.byDate) {
-              return this.offerService.filterByDate(action?.date);
-            } else if (action.type === offersActions.byRangePrice) {
-                return this.offerService.filterByPayPerHour(action?.maxPrice, action?.minPrice );
+              return this.offerService.filterByDate(action?.date );
             }    
             return EMPTY;
           }),
-          map(caretakerList => ({ type: offersActions.loaded, caretakerList })),
+          map(offersList => ({ type: offersActions.loaded, offersList })),
           catchError(() => of({ type: offersActions.error }))
         )
     );

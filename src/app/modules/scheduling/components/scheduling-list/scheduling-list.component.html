@@ -1,0 +1,6 @@
+<section class="flex gap-5">
+   <scheduling-card 
+        *ngFor="let scheduling of schedulings$ | async" 
+        [scheduling]="scheduling"
+    />
+</section>

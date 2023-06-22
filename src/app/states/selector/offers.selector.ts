@@ -4,17 +4,17 @@ import { OffersState } from 'src/app/core/models/offers.state'
 
 const selectOffers = (state: AppState) => state.offers
 
-export const selectCaretakerLoading = createSelector(
+export const selectOfferLoading = createSelector(
     selectOffers,
     (state: OffersState) => state.loading
 )
 
-export const selectCaretakerError = createSelector(
+export const selectOfferError = createSelector(
     selectOffers,
     (state: OffersState) => state.error
 )
 
-export const selectCaretakers = createSelector(
+export const selectOfferList = createSelector(
     selectOffers,
-    (state: OffersState) => state.offerList
+    (state: OffersState) => state.offersList
 )

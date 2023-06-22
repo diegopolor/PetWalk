@@ -4,6 +4,7 @@ export interface Offers {
     breed:       string;
     description: string;
     date:        string;
+    address:     string;
     payPerHour:  number;
     startTime:   string;
     endTime:     string;

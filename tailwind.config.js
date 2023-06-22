@@ -11,16 +11,18 @@ module.exports = {
     ],
     minWidth: {
       minCard: '193px',
-      minProfile: '205px',
+      generic: '205px',
       minProfileDscp: '665px',
-      minComment: '299px'
+      asideRight: '299px',
+      minHourly: '140px'
     },
     minHeight: {
       minCard: '50%',
+      'layout-offer': '501px'
     },
     maxWidth: {
-      maxProfile: '205px',
-      maxComment: '299px'
+      generic: '205px',
+      asideRight: '299px'
     },
     maxHeight: {
       maxPhotoCmmt: '50px'
@@ -39,8 +41,15 @@ module.exports = {
         button: '30px',
         full: '100px'
       },
-
-    },
+      width: {
+        imgOffer: '133px',
+        yoursOffers: '435px',
+        formOffers: '464px',
+      },
+      height: {
+        imgOffer: '133px'
+      }
+    }
   },
   plugins: [],
 }

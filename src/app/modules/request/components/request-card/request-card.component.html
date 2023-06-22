@@ -1,0 +1,15 @@
+<div class="w-96 bg-bgPrimary flex flex-col gap-5 p-5 rounded-2xl">
+    <h2 class="text-center font-semibold"> {{ request.petName }} </h2>
+    <p class="text-small">Hay una solicitud para pasear a {{ request.petName }}  
+       para el día {{ request.date }} con una disponibilidad horaria de
+       {{ request.startTime }} a {{ request.endTime }}. 
+    </p>
+    <p class="text-small">Dirección: {{ request.address }} </p>
+    <span class="text-small font-semibold text-center">
+        ¿Cuentas con la disponibilidad para aceptar esta solicitud? 
+    </span>
+    <div class="flex gap-5 items-center justify-center  ">
+        <btn-ghost class="" text="Sí" />
+        <btn-primary text="No" />
+    </div>
+</div>

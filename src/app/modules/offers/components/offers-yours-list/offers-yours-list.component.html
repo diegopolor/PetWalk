@@ -1,0 +1,7 @@
+<section class="w-yoursOffers h-full bg-bgPrimary p-5 rounded-2xl">
+    <h2 class="mb-5 font-semibold">Tus Ofertas</h2>
+    <offers-yours-card 
+        *ngFor="let offer of offers$ | async" 
+        [offer]="offer" 
+    />
+</section>

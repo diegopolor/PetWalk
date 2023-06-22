@@ -1,0 +1,10 @@
+<main class="contain">
+    <offers-filter />
+    <section class="mt-10 flex flex-col md:flex-row  gap-5" >
+        <offers-card  
+            *ngFor="let offer of offers$ | async" 
+            class="flex gap-5" 
+            [offer]="offer" 
+        />
+    </section>
+</main>

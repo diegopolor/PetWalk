@@ -1,0 +1,8 @@
+<div class="text-center bg-bgPrimary p-5 rounded-2xl" >
+    <h2 class="font-semibold">{{ scheduling.name }} </h2>
+    <div class="my-5 text-small text-bgSecundary">
+        <p> {{ scheduling.date  | dateTransform }}</p>
+        <p>{{ scheduling.endTime }} - {{ scheduling.startTime }}</p>
+    </div>
+    <btn-ghost text="Cancelar" />
+</div>

@@ -1,0 +1,19 @@
+<div class="bg-bgGeneric py-5 px-3 rounded-full">
+    <div class="flex items-center gap-5">
+        <img 
+            class="w-14 h-14 rounded-full object-cover" 
+            [src]="offer.id | profileImg" 
+            [alt]="offer.petName"
+        >
+        <div class="flex flex-col">
+            <h2 class="font-semibold">{{ offer.petName }} </h2>
+            <p class="text-small">{{ offer.breed  }}</p>
+            <p class="text-bgSecundary text-small">
+                {{ offer.date }} 
+                {{ offer.startTime }} - {{ offer.endTime }} 
+                {{ offer.payPerHour | currency }}/h COP 
+            </p>
+        </div>
+        <i class="fas fa-trash"></i>
+    </div>
+</div>

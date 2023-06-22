@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { ModuleType } from 'src/app/shared/types/module-name.type' 
+import { LayoutName } from 'src/app/shared/types/layout-name.type' 
 
 @Component({
   selector: 'app-layout',
@@ -8,5 +8,5 @@ import { ModuleType } from 'src/app/shared/types/module-name.type'
   ]
 })
 export class LayoutComponent {
-  public layaoutName: ModuleType = 'tenant'
+  public layaoutName: LayoutName = 'tenant'
 }

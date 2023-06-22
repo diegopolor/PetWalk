@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { typeMenu } from '../../config/menuItems';
 
-import { ModuleType } from '../../types/module-name.type';
+import { LayoutName } from '../../types/layout-name.type';
 import { NavbarItem } from '../../interfaces/navbar.interfaces';
 
 @Component({
@@ -10,7 +10,7 @@ import { NavbarItem } from '../../interfaces/navbar.interfaces';
 })
 
 export class HeaderComponent implements OnInit{
-  @Input() moduleUsed!: ModuleType 
+  @Input() moduleUsed!: LayoutName 
   
   public menuItems!: NavbarItem[] 
 
