@@ -4,7 +4,7 @@ export interface NavbarItem {
 }
 
 export interface ModuleName {
-    [keys: string] : any
-    tenant : NavbarItem[]
-    caretakers: NavbarItem[]
+    [keys: string] :    any
+    tenant         :    NavbarItem[]
+    caretakers     :    NavbarItem[]
 }

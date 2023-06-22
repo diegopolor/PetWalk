@@ -1,49 +1,37 @@
 import { Injectable } from "@angular/core";
-import { Action } from '@ngrx/store';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, catchError } from 'rxjs/operators';
-import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
+import { of, EMPTY, switchMap } from 'rxjs';
 
 import { offersActions } from '../actions/actions-name';
 import { OfferService } from 'src/app/modules/offers/services/offer.service';
+import { CustomEffectService } from "src/app/shared/services/custom-effect.service";
+import { StoreList } from "src/app/shared/types/store-list.type";
 
 
 @Injectable()
 export class OfferEffect {
 
-    /**
-    * Crea un efecto para manejar acciones específicas y realizar operaciones asincrónicas.
-    *
-    * @param actionType El tipo de acción que activará el efecto.
-    * @param serviceMethod La función que representa la operación asincrónica a realizar.
-    * @returns Un observable que emite acciones de carga exitosa o de error.
-    */
-    createCustomEffect = (actionType: string, serviceMethod: () => Observable<any>): Observable<Action> =>{
-      return createEffect(() =>
-        this.actions$.pipe(
-              ofType(actionType),
-              mergeMap(() =>
-                serviceMethod().pipe(
-                  map(offersList => ({ type: offersActions.loaded, offersList })),
-                  catchError(() => of({ type: offersActions.error }))
-                )
-              )
-          )
-      );
-    }
+    list: StoreList = 'offersList'
 
-    loadOffersAllEffect$ = this.createCustomEffect(
+    loadOffersAllEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        offersActions,
         offersActions.listAll,
         () => this.offerService.getAllOffers(),
         
     );
     
-    loadOfferSortByHighPayEffect$ = this.createCustomEffect(
+    loadOfferSortByHighPayEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        offersActions,
         offersActions.highPay,
         () => this.offerService.sortByHighPay()
     );
     
-    loadOffertSortByLowestPayEffect$ = this.createCustomEffect(
+    loadOffertSortByLowestPayEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        offersActions,
         offersActions.lowPay,
         () => this.offerService.sortByLowestPay()
     );
@@ -76,6 +64,7 @@ export class OfferEffect {
 
     constructor(
       private actions$: Actions,
-      private offerService: OfferService
+      private offerService: OfferService,
+      private customEffectService: CustomEffectService
     ) {}
 }

@@ -1,0 +1,1 @@
+export type StoreList = 'caretakerList' | 'offersList' | 'schedulingList' | 'requestList'

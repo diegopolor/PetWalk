@@ -1,0 +1,31 @@
+<form 
+    class="w-full md:w-loginElements md:rounded-r-3xl bg-bgSecundary p-10 flex flex-col items-center gap-5" 
+    (keyup.enter)="onLogin()"
+>
+    <img width="322" src="/assets/logos/imagotipo.png" alt="logo PetWalk">
+    <p class="text-white text-center text-small">
+        ¡Bienvenido a PetWalk! Ingresa y descubre un mundo de paseos y diversión para tu mascota.
+    </p>
+    <inpt-light 
+        class="w-full" 
+        type="text" 
+        placeholder="Username"
+        (onValue)="setUsername($event)"  
+    />
+    <inpt-light 
+        class="w-full" 
+        (onValue)="setPassword($event)" 
+        type="password" 
+        placeholder="Password"
+    />
+    <btn-primary  
+        (click)="onLogin()"
+         text="Ingresar" 
+        />
+    <p 
+        *ngIf="!validCrendentials" 
+        class="text-small text-secundary"
+    >
+        Credenciales incorrectas
+    </p>
+</form>

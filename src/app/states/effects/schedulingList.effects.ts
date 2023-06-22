@@ -1,38 +1,23 @@
 import { Injectable } from "@angular/core";
-import { Action } from '@ngrx/store';
+
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, catchError } from 'rxjs/operators';
-import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
+import { of, EMPTY, switchMap } from 'rxjs';
 
 import { schedulingActions } from '../actions/actions-name';
 import { SchedulingService } from 'src/app/modules/scheduling/services/scheduling.service';
+import { CustomEffectService } from "src/app/shared/services/custom-effect.service";
+import { StoreList } from "src/app/shared/types/store-list.type";
 
 
 @Injectable()
 export class SchedulingEffect {
 
-    /**
-    * Crea un efecto para manejar acciones específicas y realizar operaciones asincrónicas.
-    *
-    * @param actionType El tipo de acción que activará el efecto.
-    * @param serviceMethod La función que representa la operación asincrónica a realizar.
-    * @returns Un observable que emite acciones de carga exitosa o de error.
-    */
-        createCustomEffect = (actionType: string, serviceMethod: () => Observable<any>): Observable<Action> =>{
-          return createEffect(() =>
-            this.actions$.pipe(
-                  ofType(actionType),
-                  mergeMap(() =>
-                    serviceMethod().pipe(
-                      map(schedulingList => ({ type: schedulingActions.loaded, schedulingList })),
-                      catchError(() => of({ type: schedulingActions.error }))
-                    )
-                  )
-              )
-          );
-      }
+    list: StoreList = 'schedulingList'
 
-    loadSchedulingAllEffect$ = this.createCustomEffect(
+    loadSchedulingAllEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        schedulingActions,
         schedulingActions.listAll,
         () => this.schedulingService.getAllScheduling()
     );
@@ -64,6 +49,7 @@ export class SchedulingEffect {
 
     constructor(
       private actions$: Actions,
-      private schedulingService: SchedulingService
+      private schedulingService: SchedulingService,
+      private customEffectService: CustomEffectService
     ) {}
 }

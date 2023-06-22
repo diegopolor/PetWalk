@@ -19,6 +19,7 @@ import { BtnPrimaryComponent }    from './components/buttoms/btn-primary/btn-pri
 import { InptCustomComponent } from './components/inputs/inpt-custom/inpt-custom.component';
 import { InptTextAreaComponent } from './components/inputs/inpt-text-area/inpt-text-area.component';
 import { BtnRefreshComponent } from './components/buttoms/btn-refresh/btn-refresh.component';
+import { InptLightComponent } from './components/inputs/inpt-light/inpt-light.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { BtnRefreshComponent } from './components/buttoms/btn-refresh/btn-refres
     InptTextAreaComponent,
     InptCustomComponent,
     BtnRefreshComponent,
+    InptLightComponent,
   ],
   imports: [
     CommonModule,
@@ -62,6 +64,7 @@ import { BtnRefreshComponent } from './components/buttoms/btn-refresh/btn-refres
     InptCustomComponent,
     InptTextAreaComponent,
     BtnRefreshComponent,
+    InptLightComponent
   ]
 })
 export class SharedModule { }

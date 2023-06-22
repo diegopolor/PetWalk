@@ -6,33 +6,18 @@ import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
 
 import { requestActions } from '../actions/actions-name';
 import { RequestService } from "src/app/modules/request/services/request.service";
+import { CustomEffectService } from '../../shared/services/custom-effect.service';
+import { StoreList } from "src/app/shared/types/store-list.type";
 
 
 @Injectable()
 export class RequestEffect {
 
-    /**
-    * Crea un efecto para manejar acciones específicas y realizar operaciones asincrónicas.
-    *
-    * @param actionType El tipo de acción que activará el efecto.
-    * @param serviceMethod La función que representa la operación asincrónica a realizar.
-    * @returns Un observable que emite acciones de carga exitosa o de error.
-    */
-    createCustomEffect = (actionType: string, serviceMethod: () => Observable<any>): Observable<Action> =>{
-        return createEffect(() =>
-          this.actions$.pipe(
-                ofType(actionType),
-                mergeMap(() =>
-                  serviceMethod().pipe(
-                    map(requestList => ({ type: requestActions.loaded, requestList })),
-                    catchError(() => of({ type: requestActions.error }))
-                  )
-                )
-            )
-        );
-    }
+    list: StoreList = 'requestList'
 
-    loadRequestAllEffect$ = this.createCustomEffect(
+    loadRequestAllEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        requestActions,
         requestActions.listAll,
         () => this.RequestService.getAllRequests()
     );
@@ -64,6 +49,7 @@ export class RequestEffect {
 
     constructor(
       private actions$: Actions,
-      private RequestService: RequestService
+      private RequestService: RequestService,
+      private customEffectService: CustomEffectService
     ) {}
 }

@@ -21,10 +21,5 @@ export class OffersListPageComponent {
     this.store.dispatch(listAllOffers())
     this.loading$ = this.store.select(selectOfferLoading)
     this.offers$ = this.store.select(selectOfferList)
-
-    this.offers$.subscribe(data => {
-      console.log('DATA')
-      console.log(data)
-     })
   }
 }

@@ -45,6 +45,7 @@ module.exports = {
         imgOffer: '133px',
         yoursOffers: '435px',
         formOffers: '464px',
+        loginElements: '434px'
       },
       height: {
         imgOffer: '133px'

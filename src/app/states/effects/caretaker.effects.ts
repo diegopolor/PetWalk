@@ -1,56 +1,48 @@
 import { Injectable } from "@angular/core";
-import { Action } from '@ngrx/store';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, catchError } from 'rxjs/operators';
-import { of, Observable, mergeMap, switchMap, EMPTY } from 'rxjs';
+import { of, switchMap, EMPTY } from 'rxjs';
 
 import { caretakersActions } from '../actions/actions-name';
 import { CaretakerService } from "src/app/modules/caretaker/services/caretaker.service";
+import { CustomEffectService } from '../../shared/services/custom-effect.service';
+import { StoreList } from "src/app/shared/types/store-list.type";
+
 @Injectable()
 export class CaretakerEffect {
+    list: StoreList = 'caretakerList'
 
-    /**
-    * Crea un efecto para manejar acciones específicas y realizar operaciones asincrónicas.
-    *
-    * @param actionType El tipo de acción que activará el efecto.
-    * @param serviceMethod La función que representa la operación asincrónica a realizar.
-    * @returns Un observable que emite acciones de carga exitosa o de error.
-    */
-    createCustomEffect = (actionType: string, serviceMethod: () => Observable<any>): Observable<Action> =>{
-      return createEffect(() =>
-        this.actions$.pipe(
-              ofType(actionType),
-              mergeMap(() =>
-                serviceMethod().pipe(
-                  map(caretakerList => ({ type: caretakersActions.loaded, caretakerList })),
-                  catchError(() => of({ type: caretakersActions.error }))
-                )
-              )
-          )
-      );
-    }
-
-    loadCaretakerAllEffect$ = this.createCustomEffect(
+    loadCaretakerAllEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        caretakersActions,
         caretakersActions.listAll,
         () => this.caretakerService.getAllCaretakers()
     );
     
-    loadCaretakerSortAZEffect$ = this.createCustomEffect(
+    loadCaretakerSortAZEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        caretakersActions,
         caretakersActions.sortAZ,
         () => this.caretakerService.filterSortAZCaretakers()
     );
     
-    loadCaretakerSortZAEffect$ = this.createCustomEffect(
+    loadCaretakerSortZAEffect$ = this.customEffectService.createCustomEffect(
+      this.list,
+      caretakersActions,
         caretakersActions.sortZA,
         () => this.caretakerService.filterSortZACaretakers()
     );
 
-    loadCaretakerHighestStarsEffect$ = this.createCustomEffect(
+    loadCaretakerHighestStarsEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        caretakersActions,
         caretakersActions.highStars,
         () => this.caretakerService.filterByHighestStars()
     );
 
-    loadCaretakerLowestStarsEffect$ = this.createCustomEffect(
+    loadCaretakerLowestStarsEffect$ = this.customEffectService.createCustomEffect(
+        this.list,
+        caretakersActions,
         caretakersActions.lowStars,
         () => this.caretakerService.filterByLowestStars()
     );
@@ -85,6 +77,7 @@ export class CaretakerEffect {
 
     constructor(
       private actions$: Actions,
-      private caretakerService: CaretakerService
+      private caretakerService: CaretakerService,
+      private customEffectService: CustomEffectService
     ) {}
 }
