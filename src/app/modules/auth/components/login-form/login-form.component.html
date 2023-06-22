@@ -1,5 +1,5 @@
 <form 
-    class="w-full md:w-loginElements md:rounded-r-3xl bg-bgSecundary p-10 flex flex-col items-center gap-5" 
+    class="w-full md:w-loginElements rounded-r-3xl bg-bgSecundary p-10 flex flex-col items-center gap-5" 
     (keyup.enter)="onLogin()"
 >
     <img width="322" src="/assets/logos/imagotipo.png" alt="logo PetWalk">
@@ -9,14 +9,14 @@
     <inpt-light 
         class="w-full" 
         type="text" 
-        placeholder="Username"
+        placeholder="Correo electronico"
         (onValue)="setUsername($event)"  
     />
     <inpt-light 
         class="w-full" 
         (onValue)="setPassword($event)" 
         type="password" 
-        placeholder="Password"
+        placeholder="Contraseña "
     />
     <btn-primary  
         (click)="onLogin()"

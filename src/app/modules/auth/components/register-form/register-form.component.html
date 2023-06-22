@@ -1,0 +1,38 @@
+<form class="flex flex-col gap-5">
+    <inpt-custom [disabled]="true" type="text" placeholder="Nombre completo" />
+    <div class="w-full flex gap-5">
+        <inpt-custom [disabled]="true" type="text" placeholder="Tipo D." />
+        <inpt-custom [disabled]="true" class="w-full" type="text" placeholder="Numero de documento" />
+    </div>
+
+    <div class="w-full flex gap-5">
+        <inpt-custom [disabled]="true"type="text" placeholder="Genero" />
+        <inpt-custom [disabled]="true" class="w-full" type="text" placeholder="Ocupación" />
+    </div>
+
+    <div class="w-full flex gap-5">
+        <div class="flex w-full justify-between items-center px-2 text-bgSecundary bg-bgGeneric rounded-lg">
+            <label for="date" class="text-small">Nacimiento</label>
+            <inpt-custom [disabled]="true" type="date" placeholder="Fecha" />  
+        </div>
+        <inpt-custom [disabled]="true" class="w-full  rounded-full" type="text" placeholder="Dirección" />
+    </div>
+
+    <div class="w-full flex gap-3">
+        <label class="flex gap-2 bg-bgGeneric py-2 px-3 pr-10 rounded-lg"> 
+            <img src="/assets/col-flag.svg" alt="col-flag"> 
+            <span class="text-center text-small text-bgSecundary">+57</span>
+        </label>
+        <inpt-number [disabled]="true" type="number" placeholder="Número de telefono" />
+        <inpt-custom [disabled]="true"  class="w-full" type="text" placeholder="Tipo de perfil" />
+    </div>
+
+    <inpt-custom [disabled]="true" type="email" placeholder="Correo electronico" />
+
+    <div class="flex gap-5">
+        <inpt-custom [disabled]="true" class="w-full" type="password" placeholder="Contraseña" />
+        <inpt-custom [disabled]="true" class="w-full"  type="text" placeholder="Repetir contraseña" />
+    </div>
+
+    <btn-primary class="text-right" text="Registrarse" />
+</form>

@@ -42,6 +42,11 @@ export class AuthService {
             map( user => user.length > 0 ),
             catchError( () => of(false) )
           );
-      }
+    }
+
+    logout() {
+      this.user = undefined;
+      localStorage.clear();
+    }
 
 }

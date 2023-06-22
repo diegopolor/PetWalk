@@ -20,6 +20,7 @@ import { InptCustomComponent } from './components/inputs/inpt-custom/inpt-custom
 import { InptTextAreaComponent } from './components/inputs/inpt-text-area/inpt-text-area.component';
 import { BtnRefreshComponent } from './components/buttoms/btn-refresh/btn-refresh.component';
 import { InptLightComponent } from './components/inputs/inpt-light/inpt-light.component';
+import { BtnVerifyComponent } from './components/buttoms/btn-verify/btn-verify.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { InptLightComponent } from './components/inputs/inpt-light/inpt-light.co
     InptCustomComponent,
     BtnRefreshComponent,
     InptLightComponent,
+    BtnVerifyComponent,
   ],
   imports: [
     CommonModule,
@@ -64,7 +66,8 @@ import { InptLightComponent } from './components/inputs/inpt-light/inpt-light.co
     InptCustomComponent,
     InptTextAreaComponent,
     BtnRefreshComponent,
-    InptLightComponent
+    InptLightComponent,
+    BtnVerifyComponent
   ]
 })
 export class SharedModule { }

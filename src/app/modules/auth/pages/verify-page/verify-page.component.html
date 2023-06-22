@@ -1,0 +1,21 @@
+<main class="h-screen w-full  absolute top-0 left-0 flex justify-center items-center">
+    <section class="flex flex-col gap-10 ju items-center">
+        <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
+            <img class="w-1/2 md:w-44" src="/assets/logos/isotipo.png" alt="">
+            <h1 class="text-center font-bold tex-title md:text-bigTitle text-secundary">
+                Verificación de identidad
+            </h1>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-5">
+            <btn-verify 
+                *ngFor="let tag of tagsList" 
+                [text]="tag.label" 
+                [iconName]="tag.iconName" 
+            />
+        </div>
+        <div class="flex gap-5 mt-4">
+            <btn-primary text="Finalizado" />
+            <btn-primary text="Cancelar" />
+        </div>
+    </section>
+</main>

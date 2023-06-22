@@ -6,7 +6,8 @@ module.exports = {
       {
         base: ['14px', '20px'],
         small: ['12px', '20px'],
-        title: ['16px', '20px']
+        title: ['16px', '20px'],
+        bigTitle: ['32px', '20px']
       }
     ],
     minWidth: {
@@ -45,7 +46,8 @@ module.exports = {
         imgOffer: '133px',
         yoursOffers: '435px',
         formOffers: '464px',
-        loginElements: '434px'
+        loginElements: '434px',
+        formRegister: '500px'
       },
       height: {
         imgOffer: '133px'

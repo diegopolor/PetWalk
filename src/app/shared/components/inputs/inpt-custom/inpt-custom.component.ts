@@ -8,6 +8,7 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 })
 export class InptCustomComponent {
   @Input() disabled= false
+  @Input() id = ''
   @Input() placeholder = ''
   @Input() type = ''
   @Output() onValue = new EventEmitter<string>()
@@ -16,5 +17,5 @@ export class InptCustomComponent {
 
   valueEmmiter(){
     this.onValue.emit(this.inputDate.nativeElement.value)
-}
+  }
 }
