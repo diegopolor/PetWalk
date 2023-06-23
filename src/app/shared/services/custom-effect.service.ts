@@ -22,12 +22,13 @@ export class CustomEffectService {
     }
 
     /**
-    * Crea un efecto para manejar acciones específicas y realizar operaciones asincrónicas.
-    *
-    * @param actionType El tipo de acción que activará el efecto.
-    * @param serviceMethod La función que representa la operación asincrónica a realizar.
-    * @returns Un observable que emite acciones de carga exitosa o de error.
-    */
+     * Crea un efecto personalizado para su uso con @ngrx/effects.
+     * @param listName - El nombre de la lista a la que se aplicará el efecto.
+     * @param actions - Objeto que contiene las acciones personalizadas utilizadas en el efecto.
+     * @param actionType - El tipo de acción que desencadena el efecto.
+     * @param serviceMethod - Método de servicio que devuelve un Observable para realizar una llamada a un servicio externo.
+     * @returns Un Observable que emite acciones dependiendo del resultado de la llamada al servicio.
+     */
     createCustomEffect = (listName: StoreList, actions: CustomActions, actionType: string, serviceMethod: () => Observable<any>): Observable<Action> =>{
         
         return createEffect (() =>
