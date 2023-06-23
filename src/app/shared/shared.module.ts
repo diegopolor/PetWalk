@@ -5,25 +5,27 @@ import { RouterModule } from '@angular/router';
 import { profileImgPipe } from './pipes/profileImg.pipe';
 import { TransformDatePipe }      from './pipes/transformDate.pipe';
 
-import { HeaderComponent }        from './components/header/header.component';
-import { NavbarComponent }        from './components/navbar/navbar.component';
-import { BtnGhostComponent }      from './components/buttoms/btn-ghost/btn-ghost.component';
-import { StarBoxComponent }       from './components/star-box/star-box.component';
-import { SearchBoxComponent }     from './components/inputs/search-box/search-box.component';
-import { BtnOutlineComponent }    from './components/buttoms/btn-back/btn-outline.component';
-import { CommentCardComponent }   from './components/comment/comment-card/comment-card.component';
-import { CommentInputComponent }  from './components/comment/comment-input/comment-input.component';
-import { BtnSortComponent }       from './components/buttoms/btn-sort/btn-sort.component';
-import { InptNumberComponent }    from './components/inputs/inpt-number/inpt-number.component';
-import { BtnPrimaryComponent }    from './components/buttoms/btn-primary/btn-primary.component';
-import { InptCustomComponent } from './components/inputs/inpt-custom/inpt-custom.component';
-import { InptTextAreaComponent } from './components/inputs/inpt-text-area/inpt-text-area.component';
-import { BtnRefreshComponent } from './components/buttoms/btn-refresh/btn-refresh.component';
-import { InptLightComponent } from './components/inputs/inpt-light/inpt-light.component';
-import { BtnVerifyComponent } from './components/buttoms/btn-verify/btn-verify.component';
-import { HeaderPublicComponent } from './components/header-public/header-public.component';
-import { NavbarMobileComponent } from './components/navbar-mobile/navbar-mobile.component';
-import { BtnLogoutComponent } from './components/buttoms/btn-logout/btn-logout.component';
+import { 
+  HeaderComponent,       
+  NavbarComponent,        
+  BtnGhostComponent,     
+  StarBoxComponent,       
+  SearchBoxComponent,    
+  BtnOutlineComponent,    
+  CommentCardComponent,   
+  CommentInputComponent, 
+  BtnSortComponent, 
+  InptNumberComponent, 
+  BtnPrimaryComponent, 
+  InptCustomComponent, 
+  InptTextAreaComponent, 
+  BtnRefreshComponent, 
+  InptLightComponent, 
+  BtnVerifyComponent,
+  HeaderPublicComponent, 
+  NavbarMobileComponent,
+  BtnLogoutComponent 
+} from './components'
 
 
 @NgModule({
