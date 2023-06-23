@@ -1,5 +1,7 @@
 # PetWalk - Prueba Vortex Soluciones
 
+![Texto alternativo](src/assets/logos/imagotipo.png)
+
 ## Instalación 
 
 1. Clonar proyecto.
