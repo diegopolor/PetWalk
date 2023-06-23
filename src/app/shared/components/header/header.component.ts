@@ -10,14 +10,14 @@ import { NavbarItem } from '../../interfaces/navbar.interfaces';
 })
 
 export class HeaderComponent implements OnInit{
-  @Input() moduleUsed!: LayoutName 
+  @Input() layoutUsed!: LayoutName 
   
   public menuItems!: NavbarItem[] 
 
   ngOnInit(): void {
-    if(!this.moduleUsed){
+    if(!this.layoutUsed){
       throw Error('Se tiene que pasar el modulo en el que se está usando el Header')
     }
-    this.menuItems = typeMenu[this.moduleUsed] || []
+    this.menuItems = typeMenu[this.layoutUsed] || []
   }
 }

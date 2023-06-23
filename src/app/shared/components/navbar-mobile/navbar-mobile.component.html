@@ -1,0 +1,9 @@
+<button (click)="toggleShowMenu()" class="md:hidden px-3 py-2 bg-bgGeneric rounded-md">
+    <i class="text-bgSecundary fas fa-bars"></i>
+    <div 
+        class="z-50 w-full absolute right-0 mt-2 p-5 flex flex-col gap-5 bg-bgGeneric rounded shadow-lg" 
+        [class.invisible]="!showMenu"
+    >      
+        <shared-navbar class=" md:block" [listItem]="listItem" />
+    </div>
+</button>

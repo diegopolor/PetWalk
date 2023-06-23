@@ -1,7 +1,7 @@
-<aside class="flex h-full flex-col justify-between bg-bgWhite p-5 rounded-2xl max-w-asideRight min-w-asideRight ">    
+<aside class="flex h-1/2 w-full  md:h-full flex-col justify-between bg-bgWhite p-5 rounded-2xl md:max-w-asideRight min-w-asideRight ">    
     <div>
         <h2 class="font-semibold">Comentarios</h2>   
-        <div class="mt-10 flex flex-col gap-2" *ngFor="let comment of caretaker.comments">
+        <div class="py-5 md:p-0 flex flex-col gap-2" *ngFor="let comment of caretaker.comments">
            <comment-card [comment]="comment"/>
         </div>
     </div>

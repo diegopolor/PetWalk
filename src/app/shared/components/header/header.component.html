@@ -1,6 +1,10 @@
-<header class="bg-bgScreen ">
+<header class="bg-bgScreen w-full ">
     <div class="contain m-auto flex justify-between items-center">
-        <img src="../../../assets/logos/isotipo.png" width="79.87" alt="Logo PetWalk">
-        <shared-navbar [listItem]="menuItems" />
+        <img src="/assets/logos/isotipo.png" width="79.87" alt="Logo PetWalk">
+        <div class="flex gap-5 items-center">
+            <shared-navbar class="hidden md:block" [listItem]="menuItems" />
+            <navbar-mobile [listItem]="menuItems" />
+            <btn-logout class="md:hidden" />
+        </div>
     </div>
 </header>

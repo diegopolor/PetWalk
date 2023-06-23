@@ -7,7 +7,7 @@ module.exports = {
         base: ['14px', '20px'],
         small: ['12px', '20px'],
         title: ['16px', '20px'],
-        bigTitle: ['32px', '20px']
+        bigTitle: ['32px', '30px']
       }
     ],
     minWidth: {
@@ -28,6 +28,7 @@ module.exports = {
     maxHeight: {
       maxPhotoCmmt: '50px'
     },
+
     extend: {
       colors: {
         primary : '#519775',
@@ -50,8 +51,9 @@ module.exports = {
         formRegister: '500px'
       },
       height: {
-        imgOffer: '133px'
-      }
+        imgOffer: '133px',
+        imgCover: '318px'
+      },
     }
   },
   plugins: [],

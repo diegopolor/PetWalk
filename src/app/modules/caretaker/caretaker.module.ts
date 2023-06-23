@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 
 import { TenantRouterModule } from './caretaker-routing.module';
-import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CaretakerCardComponent } from './components/caretaker-card/caretaker-card.component';
 import { ProfileImgPipe } from './pipes/profile-img.pipe';
@@ -23,7 +22,6 @@ import { CaretakerProfileCommentsComponent } from './components/caretaker-profil
     //pipes
     ProfileImgPipe,
 
-    LayoutComponent,
     CaretakersListPageComponent,
 
     CaretakerCardComponent,

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login-form',
@@ -10,7 +11,10 @@ export class LoginFormComponent {
   username: string = ''
   password: string = ''
 
-  constructor(private authService: AuthService){}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ){}
 
   setUsername(username: string){
     this.username = username
@@ -25,6 +29,8 @@ export class LoginFormComponent {
     this.authService.login(this.username, this.password)
       .subscribe(isValid => {
         this.validCrendentials = isValid
+        if(!isValid) return
+        this.router.navigate(['/auth/select'])
       }
     )
   }

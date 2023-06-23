@@ -1,0 +1,12 @@
+<header class="bg-bgScreen z-50 w-full ">
+    <div class="contain flex justify-between items-center">
+        <img class="cursor-pointer" routerLink="/" src="/assets/logos/isotipo.png" width="79.87" alt="Logo PetWalk">
+        <div class="">
+            <div class="hidden  md:flex gap-5 ">
+                <btn-primary routerLink="/auth/login" text="Ingreso" />
+                <btn-ghost   routerLink="/auth/register" text="Registro" />
+            </div>
+            <navbar-mobile [listItem]="publicMenuItems" />
+        </div>
+    </div>
+</header>

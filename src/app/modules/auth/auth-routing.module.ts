@@ -4,27 +4,44 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { WarningPageComponent } from './pages/warning-page/warning-page.component';
 import { VerifyPageComponent } from './pages/verify-page/verify-page.component';
+import { LayoutComponent } from './layout/layout.component';
+import { SelectLayoutComponent } from './pages/select-layout/select-layout.component';
+import { canActivatePublic, canMatchPublic } from './guards/public.guard';
 
 const routes: Routes = [
   {
-    path: 'login',
-    component: LoginPageComponent
-  },
-  {
-    path: 'register',
-    component: RegisterPageComponent
-  },
-  {
-    path: 'warning',
-    component: WarningPageComponent
-  },
-  {
-    path: 'verify',
-    component: VerifyPageComponent
-  },
-  {
-    path: '**',
-    redirectTo: 'login',
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'login',
+        component: LoginPageComponent,
+        canActivate: [ canActivatePublic ],
+        canMatch: [  canMatchPublic ]
+      },
+      {
+        path: 'register',
+        component: RegisterPageComponent,
+        canActivate: [ canActivatePublic ],
+        canMatch: [  canMatchPublic ]
+      },
+      {
+        path: 'warning',
+        component: WarningPageComponent
+      },
+      {
+        path: 'verify',
+        component: VerifyPageComponent
+      },
+      {
+        path: 'select',
+        component: SelectLayoutComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'login',
+      }
+    ]
   }
 ]
 

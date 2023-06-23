@@ -1,10 +1,15 @@
-<main class="h-screen w-full  absolute top-0 left-0 flex justify-center items-center">
+<main class="h-screen w-full  bg-bgPrimary absolute top-0 left-0 flex justify-center items-center">
     <section class="flex flex-col gap-10 ju items-center">
         <div class="flex flex-col md:flex-row gap-5 justify-center items-center">
             <img class="w-1/2 md:w-44" src="/assets/logos/isotipo.png" alt="">
             <h1 class="text-center font-bold tex-title md:text-bigTitle text-secundary">
                 Verificación de identidad
             </h1>
+        </div>
+        <div class="w-1/2">
+            <p class=" text-small text-center">
+                Esta funcionalidad no está implementada en la versión de demostración del aplicativo. Clic en "Finalizado"
+            </p>
         </div>
         <div class="flex flex-col md:flex-row items-center justify-center gap-5">
             <btn-verify 
@@ -14,8 +19,8 @@
             />
         </div>
         <div class="flex gap-5 mt-4">
-            <btn-primary text="Finalizado" />
-            <btn-primary text="Cancelar" />
+            <btn-primary routerLink="/auth/select" text="Finalizado" />
+            <btn-primary routerLink="/auth/warning" text="Cancelar" />
         </div>
     </section>
 </main>

@@ -1,35 +1,34 @@
-import { RouterModule, Routes, CanActivateFn } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from "./app.component";
-import { canActivateGuard, canMatchGuard } from "./modules/auth/guards/auth.guard";
+import { canActivateGuard, canMatchGuard } from './modules/auth/guards/auth.guard';
+import { canActivatePublic, canMatchPublic } from './modules/auth/guards/public.guard';
 
 const routes: Routes = [
     {
-        path: 'caretakers',
-        loadChildren: ()=> import('./modules/caretaker/caretaker.module').then(m => m.CaretakerModule),
-        canActivate: [ canActivateGuard ],
-        canMatch : [ canMatchGuard ]
-    }, 
-    {
-        path: 'offers',
-        loadChildren: ()=> import('./modules/offers/offers.module').then(m => m.OffersModule)
-    },
-    {
-        path: 'request',
-        loadChildren: ()=> import('./modules/request/request.module').then(m => m.RequestModule)
-    },
-    {
-        path: 'scheduling',
-        loadChildren: ()=> import('./modules/scheduling/scheduling.module').then(m => m.SchedulingModule)
+        path: 'public',
+        loadChildren: ()=> import('./modules/home/home.module').then(m => m.HomeModule),
+        canActivate: [  canActivatePublic ],
+        canMatch: [ canMatchPublic ]
     },
     {
         path: 'auth',
-        loadChildren: ()=> import('./modules/auth/auth.module').then(m => m.AuthModule)
+        loadChildren: ()=> import('./modules/auth/auth.module').then(m => m.AuthModule),
     },
     {
-        path : '',
-        component: AppComponent
+        path : 'tenantLayout',
+        loadChildren: ()=> import('./modules/layouts/layout-tenant/layout-tenant.module').then(m => m.LayoutTenantModule),
+        canActivate: [ canActivateGuard ],
+        canMatch: [  canMatchGuard ]
+    },
+    {
+        path : 'caretakerLayout',
+        loadChildren: ()=> import('./modules/layouts/layout-caretaker/layout-caretaker.module').then(m => m.LayoutCaretakerModule),
+        canActivate: [ canActivateGuard ],
+        canMatch: [  canMatchGuard ]
+    },
+    {
+        path: '**',
+        redirectTo: 'public'
     }
 ]
 

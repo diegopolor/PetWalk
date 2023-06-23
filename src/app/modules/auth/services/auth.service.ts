@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Route, Router } from "@angular/router";
 import { Observable, catchError, map, of, switchMap, tap } from "rxjs";
 import { User } from "src/app/core/models/user.interface";
 
@@ -11,7 +12,10 @@ export class AuthService {
 
     private user?: User
 
-    constructor(private http: HttpClient){}
+    constructor(
+        private http: HttpClient,
+        private router: Router
+        ){}
 
     get currentUser(){
         if ( !this.user ) return undefined
@@ -47,6 +51,7 @@ export class AuthService {
     logout() {
       this.user = undefined;
       localStorage.clear();
+      this.router.navigate(['/auth/login'])
     }
 
 }

@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { CanActivateFn, CanMatchFn, Router, UrlTree } from '@angular/router';
+import { CanActivateFn, CanMatchFn, Router } from '@angular/router';
 import { tap, Observable, take } from 'rxjs';
 import { AuthService } from '../services/auth.service';
  
@@ -17,9 +17,9 @@ const isAuthenticated = (): boolean  | Observable<boolean>  => {
       take(1),
       tap((isAuthenticated: boolean) => {
           if (!isAuthenticated) {
-              router.navigate(['./auth']);
+              router.navigate(['/auth']);
           }
-      }),
+      })
   );
 }
  

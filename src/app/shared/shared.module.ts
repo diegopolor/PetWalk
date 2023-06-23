@@ -21,6 +21,9 @@ import { InptTextAreaComponent } from './components/inputs/inpt-text-area/inpt-t
 import { BtnRefreshComponent } from './components/buttoms/btn-refresh/btn-refresh.component';
 import { InptLightComponent } from './components/inputs/inpt-light/inpt-light.component';
 import { BtnVerifyComponent } from './components/buttoms/btn-verify/btn-verify.component';
+import { HeaderPublicComponent } from './components/header-public/header-public.component';
+import { NavbarMobileComponent } from './components/navbar-mobile/navbar-mobile.component';
+import { BtnLogoutComponent } from './components/buttoms/btn-logout/btn-logout.component';
 
 
 @NgModule({
@@ -44,6 +47,9 @@ import { BtnVerifyComponent } from './components/buttoms/btn-verify/btn-verify.c
     BtnRefreshComponent,
     InptLightComponent,
     BtnVerifyComponent,
+    HeaderPublicComponent,
+    NavbarMobileComponent,
+    BtnLogoutComponent,
   ],
   imports: [
     CommonModule,
@@ -67,7 +73,8 @@ import { BtnVerifyComponent } from './components/buttoms/btn-verify/btn-verify.c
     InptTextAreaComponent,
     BtnRefreshComponent,
     InptLightComponent,
-    BtnVerifyComponent
+    BtnVerifyComponent,
+    HeaderPublicComponent
   ]
 })
 export class SharedModule { }

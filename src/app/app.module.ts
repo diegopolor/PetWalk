@@ -14,18 +14,17 @@ import { OfferEffect } from './states/effects/offer.effects';
 import { SchedulingEffect } from './states/effects/schedulingList.effects';
 import { RequestEffect } from './states/effects/request.effects';
 
-
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({ name: 'Debug' }),
-    EffectsModule.forRoot([CaretakerEffect, OfferEffect, SchedulingEffect, RequestEffect])
+    EffectsModule.forRoot([CaretakerEffect, OfferEffect, SchedulingEffect, RequestEffect]),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

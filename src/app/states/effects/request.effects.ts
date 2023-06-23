@@ -1,8 +1,7 @@
 import { Injectable } from "@angular/core";
-import { Action } from '@ngrx/store';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { map, catchError } from 'rxjs/operators';
-import { of, Observable, mergeMap, EMPTY, switchMap } from 'rxjs';
+import { of, EMPTY, switchMap } from 'rxjs';
 
 import { requestActions } from '../actions/actions-name';
 import { RequestService } from "src/app/modules/request/services/request.service";

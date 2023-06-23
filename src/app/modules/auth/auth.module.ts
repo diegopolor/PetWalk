@@ -9,6 +9,8 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { WarningPageComponent } from './pages/warning-page/warning-page.component';
 import { VerifyPageComponent } from './pages/verify-page/verify-page.component';
+import { LayoutComponent } from './layout/layout.component';
+import { SelectLayoutComponent } from './pages/select-layout/select-layout.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { VerifyPageComponent } from './pages/verify-page/verify-page.component';
     RegisterPageComponent,
     RegisterFormComponent,
     WarningPageComponent,
-    VerifyPageComponent
+    VerifyPageComponent,
+    LayoutComponent,
+    SelectLayoutComponent
   ],
   imports: [
     CommonModule,
