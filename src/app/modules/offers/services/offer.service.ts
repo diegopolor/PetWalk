@@ -1,32 +1,36 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { Offers } from "src/app/core/models/offers.interface";
+import { environments } from "src/environments/environments";
 
 
 @Injectable({
     providedIn: 'root'
 })
 export class OfferService {
+
+    private baseUrl = environments.baseUrl
+
     constructor(private http: HttpClient){}
 
     getAllOffers(){
-        return this.http.get<Offers[]>('http://localhost:3000/offers')
+        return this.http.get<Offers[]>(`${ this.baseUrl }/offers`)
     }
 
     filterById(id: number){
-        return this.http.get<Offers[]>(`http://localhost:3000/offers?id=${id}`)
+        return this.http.get<Offers[]>(`${ this.baseUrl }/offers?id=${id}`)
     }
 
     filterByDate(date: string){
-        return this.http.get<Offers[]>(`http://localhost:3000/offers?date=${date}`)
+        return this.http.get<Offers[]>(`${ this.baseUrl }/offers?date=${date}`)
     }
 
     sortByHighPay(){
-        return this.http.get<Offers[]>('http://localhost:3000/offers?_sort=payPerHour&_order=desc')
+        return this.http.get<Offers[]>(`${ this.baseUrl }/offers?_sort=payPerHour&_order=desc`)
     }
 
     sortByLowestPay(){
-        return this.http.get<Offers[]>('http://localhost:3000/offers?_sort=payPerHour&_order=asc')
+        return this.http.get<Offers[]>(`${ this.baseUrl }/offers?_sort=payPerHour&_order=asc`)
     }
     
 }

@@ -7,6 +7,7 @@ import { VerifyPageComponent } from './pages/verify-page/verify-page.component';
 import { LayoutComponent } from './layout/layout.component';
 import { SelectLayoutComponent } from './pages/select-layout/select-layout.component';
 import { canActivatePublic, canMatchPublic } from './guards/public.guard';
+import { canActivateGuard, canMatchGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -35,7 +36,9 @@ const routes: Routes = [
       },
       {
         path: 'select',
-        component: SelectLayoutComponent
+        component: SelectLayoutComponent,
+        canActivate: [ canActivateGuard ],
+        canMatch: [  canMatchGuard ]
       },
       {
         path: '**',

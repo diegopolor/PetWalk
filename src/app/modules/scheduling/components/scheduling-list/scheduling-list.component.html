@@ -1,6 +1,8 @@
-<section class="flex gap-5">
-   <scheduling-card 
-        *ngFor="let scheduling of schedulings$ | async" 
-        [scheduling]="scheduling"
+<section class="flex justify-center md:justify-normal w-full">
+    <div class="flex md:justify-normal gap-2 md:gap-5 w-full flex-wrap">
+        <scheduling-card 
+            *ngFor="let scheduling of schedulings$ | async" 
+            [scheduling]="scheduling"
     />
+    </div>
 </section>

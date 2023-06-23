@@ -1,6 +1,6 @@
-<div class="w-full h-20 flex flex-col md:flex-row  gap-5 items-center">
+<div class="w-full h-20 flex flex-col md:flex-row  gap-5 md:items-center">
     <search-box class="pt-5 md:p-0" (onValue)="findByName($event)" /> 
-    <div class="flex gap-5 ">
+    <div class="flex md:flex-row gap-5 ">
         <caretaker-sort />
         <btn-refresh (click)="resetData()" />
     </div>

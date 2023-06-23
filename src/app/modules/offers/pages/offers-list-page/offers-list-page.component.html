@@ -1,9 +1,9 @@
 <main class="contain">
     <offers-filter />
-    <section class="mt-10 flex flex-col md:flex-row  gap-5" >
+    <section class="mt-10 flex flex-col items-center md:flex-row flex-wrap gap-5" >
         <offers-card  
             *ngFor="let offer of offers$ | async" 
-            class="flex gap-5" 
+            class="w-10/12 md:w-1/4 flex gap-5" 
             [offer]="offer" 
         />
     </section>

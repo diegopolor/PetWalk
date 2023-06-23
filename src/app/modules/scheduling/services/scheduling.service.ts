@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
+import { environments } from "src/environments/environments";
 
 
 @Injectable({
@@ -7,18 +8,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SchedulingService {
 
+    private baseUrl = environments.baseUrl
+
     constructor(private http: HttpClient){}
 
     getAllScheduling(){
-        return this.http.get('http://localhost:3000/scheduling')
+        return this.http.get(`${ this.baseUrl }/scheduling`)
     }
 
     filterPerCaretaker(caretakersName: string){
-        return this.http.get(`http://localhost:3000/scheduling?name=${caretakersName}`)
+        return this.http.get(`${ this.baseUrl }/scheduling?name=${caretakersName}`)
     }
 
     filterByDate(date: string){
-        return this.http.get(`http://localhost:3000/scheduling?date=${date}`)
+        return this.http.get(`${ this.baseUrl }/scheduling?date=${date}`)
     }
 
 }

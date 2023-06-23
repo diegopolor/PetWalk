@@ -10,5 +10,5 @@
     </div>
     <span class="text-small text-bgSecundary"> {{ offer.date }} {{ offer.startTime }} - {{ offer.endTime }}</span>
     <span class="text-small text-bgSecundary"> {{ offer.payPerHour | currency}} COP </span>
-    <btn-ghost text="Ver Oferta" (click)="showOffer(offer.id)"/>
+    <btn-ghost [routerLink]="offer.id" text="Ver Oferta" />
 </div>
